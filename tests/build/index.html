@@ -157,6 +157,11 @@
       Change Marker
     </div>
   </button>
+  <button id="auth" disabled type="button">
+    <div id="p4" style='left: calc(100vw - 150px);'>
+      Drive
+    </div>
+  </button>
   <p id="p2"></p>
   <button type="button" data-toggle="modal" data-target="#share">
     <div id="p4" style='left: calc(100vw - 100px);'>Share
@@ -188,6 +193,9 @@
       <i id="p1" class="fa fa-video-camera"></i>
     </button>
   </P>
+
+  <div id="result"></div>
+
   <div class="modal " id="choosemarker" tabindex="-1" role="dialog" aria-labelledby="assetsTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -200,45 +208,19 @@
         <div class="modal-body">
           <div class='mdl-grid'>
             <div class='mdl-cell mdl-cell--4-col'>
-              <label id='buttonUpload' for='fileinput' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>
+              <label id='buttonUpload' for='fileinput'
+                class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>
                 <input type='file' id='fileinput' style='display: none' accept='image/*'>
                 Upload
               </label>
-<<<<<<< HEAD
-              <!-- <div class='mdl-tooltip' for='buttonUpload'>
-                Upload the image to put inside the marker
-                <div> >
-                  <canvas id="canvas">
-                    Your browser does not support the HTML5 canvas element.
-                  </canvas>
-                </div>
-<<<<<<< HEAD
-
-                <div id="result"></div>
-=======
-=======
-              <div style="margin-Left: 20px" class='mdl-tooltip' for='buttonUpload'>
-                Upload the image to put inside the marker
->>>>>>> 6e42ecc1293a8273cbe8cd159fb6ab074458c165
-                
-                
-                    <div id="result"></div>
->>>>>>> d12d6e928767a5c1a8d88ce3bed552dc298384f7
-
-              </div> -->
             </div>
 
             <div class='mdl-cell mdl-cell--6-col'>
-              <label id='markerless' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>
+              <label id='markerless'
+                class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>
                 <button onclick='markerless(this);'> GO MARKERLESS</button>
               </label>
-<<<<<<< HEAD
-              <!-- <div class='mdl-tooltip' for='markerless'>
-=======
-              <div  class='mdl-tooltip' for='markerless'>
->>>>>>> 6e42ecc1293a8273cbe8cd159fb6ab074458c165
-                Create markerless AR
-              </div> -->
+
             </div>
 
             <div class='mdl-cell mdl-cell--6-col' style='display:none;'>
@@ -257,16 +239,10 @@
                 style="margin-right: 12%;">
                 Save Marker
               </button>
-              <!-- <div class='mdl-tooltip' for='buttonDownloadEncoded'>
-                Save marker encoded from the uploaded image
-              </div> -->
               <button id='buttonDownloadFullImage'
                 class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>
                 Download Image
               </button>
-              <!-- <div class='mdl-tooltip' for='buttonDownloadFullImage'>
-                Download marker image
-              </div> -->
             </div>
             <div class='mdl-grid'>
               <div class='mdl-cell mdl-cell--3-col'>
@@ -629,10 +605,11 @@
             <option>&#xf00f</option>
           </select>
 
-          <input id="buttext" type="text" placeholder="Text" onchange="chgtxt(this)" onkeyup="chgtxt(this)"  onfocus="msg()" maxlength="8">
+          <input id="buttext" type="text" placeholder="Text" onchange="chgtxt(this)" onkeyup="chgtxt(this)"
+            onfocus="msg()" maxlength="8">
           <p id="xx"> ... </p>
           <input id='butlink' type="text" placeholder="http://" onchange="chglnk(this)">
-          
+
           <input title="Roundness of Button" type="range" min="1" max="50" value="0" class="slider" id="butround"
             oninput="chground(this)">
           <br><br>
@@ -656,35 +633,8 @@
           </button>
 
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <button type="button" class="close" id="ctaBtnGo" onClick='linkvisit()'>
 
-
-
-
-
-
-
-=======
-          <button type="button" class="close" id="ctaBtnGo" onClick= 'linkvisit()'>
-      
->>>>>>> d12d6e928767a5c1a8d88ce3bed552dc298384f7
             <i class="fa fa-play"></i> &nbsp;&nbsp;&nbsp;
           </button>
           <br>
@@ -833,6 +783,73 @@
   <script src="UI.js"></script>
   <script src="Experience.js"></script>
   <script>
+
+
+    var developerKey = 'AIzaSyDQAHzETBqVoteIYO0O6eZq2yxTpkZJzqI';
+
+    // The Client ID obtained from the Google API Console. Replace with your own Client ID.
+    var clientId = '942791088244-a7mic0de50ft9iutuun1i2in7jtc09on.apps.googleusercontent.com';
+
+    // Scope to use to access user's photos.
+    var scope = 'https://www.googleapis.com/auth/photos';
+
+    var pickerApiLoaded = false;
+    var oauthToken;
+
+    // Use the API Loader script to load google.picker and gapi.auth.
+    function onApiLoad() {
+      gapi.load('auth2', onAuthApiLoad);
+      gapi.load('picker', onPickerApiLoad);
+    }
+
+    function onAuthApiLoad() {
+      var authBtn = document.getElementById('auth');
+      authBtn.disabled = false;
+      authBtn.addEventListener('click', function () {
+        gapi.auth2.authorize({
+          client_id: clientId,
+          scope: scope
+        }, handleAuthResult);
+      });
+    }
+
+    function onPickerApiLoad() {
+      pickerApiLoaded = true;
+      createPicker();
+    }
+
+    function handleAuthResult(authResult) {
+      if (authResult && !authResult.error) {
+        oauthToken = authResult.access_token;
+        createPicker();
+      }
+    }
+
+    // Create and render a Picker object for picking user Photos.
+    function createPicker() {
+      if (pickerApiLoaded && oauthToken) {
+        var picker = new google.picker.PickerBuilder().
+          addView(google.picker.ViewId.PHOTOS).
+          setOAuthToken(oauthToken).
+          setDeveloperKey(developerKey).
+          setCallback(pickerCallback).
+          build();
+        picker.setVisible(true);
+      }
+    }
+
+    // A simple callback implementation.
+    function pickerCallback(data) {
+      var url = 'nothing';
+      if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
+        var doc = data[google.picker.Response.DOCUMENTS][0];
+        url = doc[google.picker.Document.URL];
+      }
+      var message = 'You picked: ' + url;
+      document.getElementById('result').innerHTML = message;
+    }
+
+
     function init() {
       gapi.client.setApiKey("AIzaSyACc5T8EmsRDs1nK_i8zqmcK8T9hVy-ljs");
       gapi.client.load("youtube", "v3", function () {
@@ -921,6 +938,8 @@
 
   </script>
   <script src="https://apis.google.com/js/client.js?onload=init"></script>
+  <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
+
 </body>
 
 </html>

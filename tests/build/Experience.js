@@ -1,13 +1,8 @@
 var start1 =
-<<<<<<< HEAD
-	"<html><head><link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'><script src='https://aframe.io/releases/0.9.0/aframe.min.js'></script><script src='https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js'></script>" +
-	"<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>" +
-=======
 	"<html><head><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>" +
 	"<script src='https://aframe.io/releases/0.9.0/aframe.min.js'></script><script src='https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js'></script>" +
 	"<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>" + 
 	"<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>" +
->>>>>>> 6e42ecc1293a8273cbe8cd159fb6ab074458c165
 	"<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script></head>" +
 	"<body style='margin : 0px; overflow: hidden;'>" +
 	"<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam;debugUIEnabled: false;'>";
@@ -15,9 +10,6 @@ var marker = "<a-marker-camera preset='hiro'>";
  var linkmarker= "https://pitchar.io/uploads/marker/1555352918.png";
 var mid3d = ' ';
 var mid2d = '</a-marker-camera></a-scene>';
-
-
-
 var end1="<div id='splashscreen' style='background-color: white; height:100% ; width:100%; position:absolute; top:0px; left:0px; z-index:4;'>"+
 "<img src='"+linkmarker+"' width='40%' style='margin: 10px;float:left;'>"+
 "<a style='position: absolute;top: 0px;margin: 10px;text-decoration: none;color:#4846ae;'>Share Marker</a>"+
@@ -50,21 +42,6 @@ function showEntities() {
 	var sceneEl = document.querySelector('#perswin');
 	var els = sceneEl.querySelectorAll('.exp');
 	var els2 = document.querySelectorAll('.exp2');
-	
-	// if(els2.className == "linkbttn")
-	// if(els2.className.contains("linkbttn"))
-	// console.log("898989");
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
 	mid3d = '';
 	var temp = '';
 	for (var i = 0; i < els.length; i++) {
@@ -74,13 +51,8 @@ function showEntities() {
 	for (var j = 0; j < els2.length; j++) {
 		
 		if(els2[j].classList.contains("linkbttn"))
-		{// document.getElementsByClassName("linkbttn")
-		// lnk = document.getElementById("butlink").value;
-		// console.log(lnk);
-		// console.log(els2[j]);
+		{
 		els2[j].setAttribute('onclick', 'linkvisit(this)');
-		
-	
 	}
 	temp += els2[j].outerHTML;
 		console.log(els2[j]);
@@ -146,17 +118,12 @@ function sharelnk(e) {
 	console.log(k);
 	
 }
-
-
 function gotolink(){
 
 	var k= document.getElementById('shrlnk').value;
 	window.open(k);
 	 
-	
 }
-
-
 
 function selectMarker(e) {
 	$.ajax({

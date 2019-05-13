@@ -218,34 +218,10 @@ function addbut(e) {
 	console.log(lnk);
 	var x = cta.cloneNode(true);
 	x.style.position = 'fixed';
-<<<<<<< HEAD
-	x.style.bottom = '100px';
-	x.style.marginLeft = 10 + (t*10) + (u * 60) +'px';
-	x.style.zIndex = '1';
-=======
-	x.style.bottom = '150px';
-	// x.style.left = 10 + (t*10) + (u * 60) +'px';
-	x.style.marginLeft = 10 + (u * 120) +'px';
-	x.style.zIndex = '5';
->>>>>>> 6e42ecc1293a8273cbe8cd159fb6ab074458c165
-	x.id = 'cta' + ctaid;
-	linkid= x.id;
-	x.style.height = 'fit-content';
-	x.classList.add('exp2');
-
-
-	x.classList.add('linkbttn');
-	
-	
-	x.setAttribute('data-toggle', 'modal');
-	x.setAttribute('data-target', '#ctaModal');
-	var d2 = document.getElementById('d2');
-	d2.appendChild(x);
 	++ctaid;
 
 	$("#" + x.id).click(function (event) {
 		event.preventDefault();
-		ctaset(this);
 	});
 }
 
@@ -272,9 +248,6 @@ var q=play.style.marginLeft;
 var p=parseInt(q.substring(0,q.indexOf("p")));
 var rmvnode=(p-10)/120;
 
-//var l=play.nextSibling.nextSibling.style.marginLeft;
-//console.log(q); //margin of removed node
-//console.log(l); //margin of next node
 
 console.log(u); //total nodes added
 console.log(rmvnode); //position of removed node
@@ -447,10 +420,6 @@ var q=play.style.marginLeft;
 var p=parseInt(q.substring(0,q.indexOf("p")));
 var rmvnode=(p-10)/60;
 
-//var l=play.nextSibling.nextSibling.style.marginLeft;
-//console.log(q); //margin of removed node
-//console.log(l); //margin of next node
-
 console.log(w); //total nodes added
 console.log(rmvnode); //position of removed node
 for(var i=rmvnode+1; i<=w; i++)
@@ -565,27 +534,6 @@ function ytset(e) {
 }
 
 function ytUnpushedVideo(e) {
-	// len= (e.dataset.idyt).length;
-	// var idd= (e.dataset.idyt).charAt(len-1);
-	// console.log(idd);
-	// document.getElementById(e.dataset.idyt).remove();
-	// document.getElementById('ytembed').src = '';
-	// 	cnt--;
-		
-	// 	if(idd=="1")
-	// 	{
-	// 		cnt=1;
-	// 	}
-	// 	else if(idd=="2"){
-
-	// 		cnt=2;
-	// 	}
-	// 	else if(idd=="3"){
-
-	// 		cnt=3;
-	// 	}
-
-
 
 	var play=document.getElementById(e.dataset.idyt);
 	var q=play.style.top;
@@ -609,26 +557,7 @@ function ytUnpushedVideo(e) {
 	document.getElementById(e.dataset.idyt).remove();
 	cnt--;
 
-
-		/*cnt =1 if (position of deleted video is 150px)
-		else if position of deleted video is 250px c=2 
-		else if position of deleted video is 350 px c=3*/
-	//alert (cnt);
-	/*var node = document.createElement('img');
-	node.style.top = 50 + (100 * (cnt)) + 'px';
-	pos= node.style.top;
-	alert(pos);*/
-	/*if(cnt==3){
-			pos=
-			pushYT();
-	*///cnt= (pos-50)/100;
-	//alert(cnt);
-	
-	
-	//alert(cnt);
-
 }
-//}
 
 function readURL(input) {
 	if (input.files && input.files[0]) {
