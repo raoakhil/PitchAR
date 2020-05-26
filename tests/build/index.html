@@ -1,0 +1,2357 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/js/plugins/piexif.min.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/js/fileinput.min.js"></script>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+	<link rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.blue-indigo.min.css'>
+	<script defer src='https://code.getmdl.io/1.3.0/material.min.js'></script>
+	<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+	<script src='threex-arpatternfile.js'></script>
+	<link rel="stylesheet" href="Crop/croppie.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.1/cropper.css" integrity="sha256-5Exdy38HzBKVlB42dFIE7IU9JVqMkl/dn046g3e7hAk=" crossorigin="anonymous" />
+	<link rel="stylesheet" media="screen" type="text/css" href="colorpicker/css/colorpicker.css" />
+	<script type="text/javascript" src="colorpicker/js/colorpicker.js"></script>
+	<script type="text/javascript" src="https://johnresig.com/files/htmlparser.js"></script>
+	<!-- <script type="text/javascript" src="../src/.js"></script> -->
+
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+		    @font-face {
+		      font-family: 'orbitron';
+		      src: url('css/orbitron-black-webfont.eot');
+		      src: url('css/orbitron-black-webfont.eot?#iefix') format('embedded-opentype'),
+		        url('css/orbitron-black-webfont.woff') format('woff'),
+		        url('css/orbitron-black-webfont.ttf') format('truetype'),
+		        url('css/orbitron-black-webfont.svg#orbitron-black-webfont') format('svg');
+		      font-weight: normal;
+		      font-style: normal;
+		    }
+
+		    @font-face {
+		      font-family: 'yatraone';
+		      src: url('css/YatraOne-Regular.ttf');
+		      src: url('css/YatraOne-Regular.ttf') format('truetype');
+		      font-weight: normal;
+		      font-style: normal;
+		    }
+
+		    @font-face {
+		      font-family: 'greatvibes';
+		      src: url('css/GreatVibes-Regular.ttf');
+		      src: url('css/GreatVibes-Regular.ttf') format('truetype');
+		      font-weight: normal;
+		      font-style: normal;
+		    }
+
+		    @font-face {
+		      font-family: 'amita';
+		      src: url('css/Amita-Regular.ttf');
+		      src: url('css/Amita-Regular.ttf') format('truetype');
+		      font-weight: normal;
+		      font-style: normal;
+		    }
+
+		    @font-face {
+		      font-family: 'leaguescript';
+		      src: url('css/LeagueScriptNumberOne-webfont.eot');
+		      src: url('css/LeagueScriptNumberOne-webfont.eot?#iefix') format('embedded-opentype'),
+		        url('css/LeagueScriptNumberOne-webfont.woff') format('woff'),
+		        url('css/LeagueScriptNumberOne-webfont.ttf') format('truetype'),
+		        url('css/LeagueScriptNumberOne-webfont.svg#orbitron-black-webfont') format('svg');
+		      font-weight: normal;
+		      font-style: normal;
+		    }
+
+		    @font-face {
+		      font-family: 'leaguemono';
+		      src: url('css/LeagueMono-Regular.eot');
+		      src: url('css/LeagueMono-Regular.eot?#iefix') format('embedded-opentype'),
+		        url('css/LeagueMono-Regular.woff') format('woff'),
+		        url('css/LeagueMono-Regular.ttf') format('truetype'),
+		        url('css/LeagueMono-Regular.svg#orbitron-black-webfont') format('svg');
+		      font-weight: normal;
+		      font-style: normal;
+		    }
+
+		    @font-face {
+		      font-family: 'knewave';
+		      src: url('css/knewave-webfont.eot');
+		      src: url('css/knewave-webfont.eot?#iefix') format('embedded-opentype'),
+		        url('css/knewave-webfont.woff') format('woff'),
+		        url('css/knewave-webfont.ttf') format('truetype'),
+		        url('css/knewave-webfont.svg#orbitron-black-webfont') format('svg');
+		      font-weight: normal;
+		      font-style: normal;
+        }
+        .cr-boundary{
+          display: none!important;
+        }
+	</style>
+	<link rel="stylesheet" href="UI.css" />
+	<title>PitchAR AR Creator</title>
+	<script>
+		var unpic;
+		var pexpic;
+	</script>
+	<script src="../build.js"></script>
+</head>
+
+<body>
+		<section id="header">
+			<nav class="navbar navbar-expand-md navbar-default fixed-top">
+				<a href="#" class="navbar-brand p-0">
+				  <h3 style="margin: 0;font-size: 30px;">Pitcher</h3>
+				</a>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<div class="navbar-nav">
+						<a href="#" class="nav-item nav-link active m-1">Page:
+						  </a>
+					  <input class="form-control" placeholder="Enter project name" type="text" name="product" list="productName"/>
+					  <datalist id="productName">
+						  <option value="1">Project 1</option>
+						  <option value="2">Project 2</option>
+						  <option value="3">Project 3</option>
+					  </datalist>
+					</div>
+					<div class="navbar-nav ml-auto">
+						<a href="#" onclick="redo()" class="nav-item nav-link redo-undo text-center mt-2" id="redobtn">
+							<i class="fa fa-undo"></i><br>
+							redo
+						</a>
+						<a href="#"  class="nav-item nav-link redo-undo text-center pl-0 mt-2 mr-4" id="undobtn">
+							<i class="fa fa-repeat"></i><br>
+							undo
+						</a>
+
+						<a id="authg" class="nav-item nav-link button-bordered">Drive</a>
+						<a href="#" class="nav-link button-solid btn-publish" data-toggle="modal" data-target="#modal-publish">Share</a>
+					</div>
+				</div>
+			</nav>
+
+			  </section>
+	<a-scene id='perswin' vr-mode-ui="enabled: false">
+
+		<a-assets>
+			<img src="honeycomb.jpg" crossorigin="anonymous" id="wireframe">
+			<img src="marker/hiro.png" crossorigin="anonymous" id="logo">
+			<img src="z-axis.svg" crossorigin="anonymous" id="zpos">
+			<img src="x-rot.svg" crossorigin="anonymous" id="xrot">
+			<img src="y-rot.svg" crossorigin="anonymous" id="yrot">
+			<img src="z-rot.svg" crossorigin="anonymous" id="zrot">
+			<img src="scale.svg" crossorigin="anonymous" id="scale">
+		</a-assets>
+		<a-sky color=""></a-sky>
+		<a-box id='object' visible='false' click-drag position="0 0.5 0" rotation="0 0 0" width="1" height="1" depth="1" color="#4CC3D9"></a-box>
+		<a-entity id="modifier" position="0 0 0">
+			<a-image id='zaxis' click-drag look-at='#cam' position="-1.25 0.6 0" rotation="0 0 0" src='#zpos' geometry="primitive: circle;radius:0.2;"></a-image>
+			<a-image id='rx' click-drag look-at='#cam' position="1.25 0.6 0" rotation="0 0 0" src='#xrot' geometry="primitive: circle;radius:0.2;"></a-image>
+			<a-image id='ry' click-drag look-at='#cam' position="0  -1.25 0" rotation="0 0 0" src='#yrot' geometry="primitive: circle;radius:0.2;"></a-image>
+			<a-image id='rz' click-drag look-at='#cam' position="0 2 0" rotation="0 0 0" src='#zrot' geometry="primitive: circle;radius:0.2;"></a-image>
+			<a-image id='sc' click-drag look-at='#cam' position="1.25 2 0" rotation="0 0 0" src='#scale' geometry="primitive: circle;radius:0.24;" material="color:#000000"></a-image>
+		</a-entity>
+		<a-camera id='cam' look-controls='enabled:false' wasd-controls='enabled:false;' position='0 1.5 6' rotation="0 0 0" orbit-controls="target: #imglogo;invertZoom:true;minPolarAngle:0.75;maxPolarAngle:1.5;enableKeys:false;">
+			<a-animation attribute="position" dur="3000" easing="linear" from="0 0.5 1" to="0 1.5 6"></a-animation>
+		</a-camera>
+		<a-image src="#wireframe" position="0 0 0" rotation="-90 0 0" scale="80 80 0" material="color: #ececec;opacity:0.2;"></a-image>
+		<a-image id='imglogo' src="#logo" position="0 0.1 0" rotation="-90 0 0" scale="2 2 0" material="color: #ececec;opacity:1;"></a-image>
+	</a-scene>
+	<div id='uploadbar' style="position:fixed;top:0px;left:0px;height:5px;width:0%;z-index:9999;background-color:#4846ae;"></div>
+	<div id="d2"></div>
+	<!-- <div id="p5">
+		<button id="p7"><i class="fa fa-rotate-left"></i>
+		</button>
+		<button id="p7"><i class="fa fa-rotate-right"></i>
+		</button>
+		<button>
+			<div id="p6">Share</div>
+		</button>
+	</div> -->
+	<!-- <button id='choosemarkerbut' type="button" data-toggle="modal" data-target="#choosemarker">
+		<div id="p4">Change Marker</div>
+	</button> -->
+	<!-- <button id="authg" disabled type="button">
+		<div id="p4" style='left: calc(100vw - 150px);'>Drive</div>
+	</button> -->
+	<p id="p2"></p>
+	<!-- <button >
+		<div id="p4" style='left: calc(100vw - 100px);'>Share</div>
+	</button> -->
+	<!-- <div style="float: left; width: 100%; position: relative; top: -101px; text-align: center;">&nbsp;
+		<button id='imagebut' type="button" data-toggle="modal" data-target="#images"> <i id="p1" class="fa fa-image"></i>
+		</button>&nbsp; -->
+		<!-- <button id='asset' type="button" data-toggle="modal" data-target="#assets"> <i id="p1" class="fa fa-cube"></i>
+    </button>&nbsp; -->
+    <!-- <button type="button" data-toggle="modal" data-target="#assets"> <i id="p1" class="fa fa-cube"></i>
+		</button>&nbsp;
+		<button id='txtbut' type="button" data-toggle="modal" data-target="#txt"> <i id="p1" class="fa fa-text-width"></i>
+		</button>&nbsp;
+		<button id='musicbut' type="button" data-toggle="modal" data-target="#music"> <i id="p1" class="fa fa-music"></i>
+		</button>&nbsp;
+		<button id='ctabut' type="button" data-toggle="modal" data-target="#cta"> <i id="p1" class="fa fa-caret-square-o-right"></i>
+		</button>&nbsp;
+		<button id="videobut" type="button" data-toggle="modal" data-target="#videos"> <i id="p1" class="fa fa-video-camera"></i>
+		</button>
+	</div> -->
+	<div id="result"></div>
+	<!-- modals -->
+	<div class="modal fade modal-custom" id="modal-publish" aria-modal="true">
+			<div class="modal-dialog modal-lg">
+			  <div class="modal-content">
+				<!-- Modal Header -->
+				<div class="modal-header bg-blue text-white text-center">
+				  <h5 class="modal-title text-center w-100">Give your creation a title<br><small class="text-center w-100">Please add name and description to your creation before sharing it:</small></h5>
+				  <div class="btn-close m-0" data-dismiss="modal">×</div>
+				</div>
+
+				<!-- Modal body -->
+				<div class="modal-body p-0">
+				  <div v="" class="col-sm-12 h-100 p-0">
+					  <div class="col-sm-5 float-left object-panel text-center" id="object-panel">
+							<img src="marker/hiro.png">
+					  </div>
+					  <!-- <form id="form0" enctype="multipart/form-data" method="post">
+						<input id='auth' name="authtoken" type="hidden" value="">
+						<label>Name :</label>
+						<input id="" name="name" type="text">
+						<br>
+						<label style='position: relative;top: -15px;'>Description :</label>&Tab;
+						<textarea id="" name="description" type="textarea"></textarea>
+						<input type="hidden" name="submit" value="1">
+						<br>
+						<label>Tags :</label>&nbsp;
+						<input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" />
+						<input type="hidden" name='experience' id='exptxt'>
+					</form>
+					<button type="button" onclick="sharelnk(this)" style='width:200px;' class="uploadbut">Get sharable link</button>
+					<input type='text' id='shrlnk' placeholder='Sharing Link'>
+					<button type="button" onclick="gotolink()" style='width:10px;'><i class="fa fa-external-link"></i> -->
+					<!-- </button> -->
+					<form id="form0" enctype="multipart/form-data" method="post">
+					  <div class="col-sm-7 float-right form-container pl-5 pr-5">
+
+							<div class="form-ele">
+							<input id='auth' name="authtoken" type="hidden" value="">
+							<input type="hidden" name='experience' id='exptxt'>
+							<div class="form-group">
+							  <label for="title">Title:</label>
+							  <input type="text" class="form-control" id="title" placeholder="Enter A Title" name="name">
+							</div>
+							<div class="form-group">
+							  <label for="pwd">Description:</label>
+							  <textarea class="form-control"  name="description" id="" rows="3" placeholder="Enter Description"></textarea>
+							</div>
+							<input type="hidden" name="submit" value="1">
+							<div class="col-sm-12 text-center">
+							  <button type="submit" class="btn btn-default btn-round-blue pl-5 pr-5 btn-continue" onclick="sharelnk(this)">Continue <i class="fa fa-arrow-right"></i> </button>
+							</div>
+						</div>
+						  <div class="congo-screen p-4">
+							<div class="clearfix pb-2">
+							  <!-- <img src="images/code.png" alt="..." class="float-right" height="100"> -->
+							  <div>
+								<h5><small>Your creation is now live</small></h5>
+								<small class="text-muted">Use the QR Code on your phone or choose any of the options below.</small>
+							  </div>
+							  <div class="input-group mt-4 pull-left form-group-lightblue">
+								<input type="text"  id='shrlnk' placeholder='Sharing Link' class="form-control m-0" aria-label="link">
+								<div class="input-group-append">
+								  <span class="input-group-text btn" onclick="copyLinkUrl()"><i class="fa fa-clipboard" aria-hidden="true"></i></span>
+								  <span class="input-group-text right-round-border btn" onclick="gotolink()"><i class="fa fa-external-link" aria-hidden="true"></i></span>
+								</div>
+							  </div>
+							</div>
+							<div class="col-sm-12 p-0">
+								<h5 class="text-center mt-5 mb-4"><small>Share to other media</small></h5>
+								<div class="media-options offset-sm-2 col-sm-8 ">
+								  <div class="m-option text-white" style="background: #e23e38">
+										&lt; &gt;
+								  </div>
+								  <div class="m-option text-white" style="background: #00a2f8">
+										<i class="fa fa-twitter"></i>
+								  </div>
+								  <div class="m-option text-white" style="background:#d93025">
+									<i class="fa fa-envelope-o" aria-hidden="true"></i>
+								  </div>
+								  <div class="m-option text-white" style="background:#00ca53">
+										<i class="fa fa-whatsapp"></i>
+								  </div>
+								</div>
+								<div class="col-sm-12 text-center mt-5">
+								  <button class="btn btn-default btn-round-blue-bordered btn-change-detail">Change Detail</button>
+								  <button class="btn btn-default btn-round-blue pl-5 pr-5" data-dismiss="modal">Done</button>
+								</div>
+							</div>
+						  </div>
+
+					  </div>
+					</form>
+				  </div>
+				</div>
+			</div>
+			</div>
+		  </div>
+	<div class="modal fade modal-custom" id="modal-show-more">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<!-- Modal Header -->
+				<div class="modal-header bg-blue text-white">
+					<h5 class="modal-title">Choose Media Files</h5>
+					<div class="btn-close m-0" data-dismiss="modal">&times;</div>
+				</div>
+				<!-- Modal body -->
+				<div class="modal-body p-0">
+					<div class="upload-media-panel col-sm-12 p-0 h-100 float-left">
+						<div class="col-sm-2 left-panel float-left">
+							<button class="btn btn-primary btn-upload-media btn-round-blue w-100">+ Upload Media</button>
+							<div class="left-panel-menu">
+								<h6><small><b>MANAGE</b></small></h6>
+								<div class="left-panel-options">
+									<div class="left-panel-option selected gallery_media" show_class=".site-file">Site Files</div>
+									<div class="left-panel-option favorites" show_class=".favourites">My Favorites</div>
+									<div id="choosemarkerbut" class="left-panel-option" show_class=".markers">Markers</div>
+								</div>
+							</div>
+							<div class="left-panel-menu mt-3">
+								<h6><small><b>EXPLORE</b></small></h6>
+								<div class="left-panel-options">
+									<!-- <div class="left-panel-option" show_class=".wix">
+                          Media From Wix
+                        </div> -->
+									<!-- <div class="left-panel-option" show_class=".shutterstock">
+                          Shutterstock
+                        </div> -->
+                  <div class="left-panel-option unsplash_media" show_class=".unsplash">Unsplash</div>
+                  <div class="left-panel-option googlepoly_media" show_class=".googlepoly">Google Poly</div>
+                  <div class="left-panel-option youtube_media" show_class=".youtube_panel">Youtube</div>
+                  <div class="left-panel-option fs_media_m" show_class=".FS_panel">Free Sound</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="site-file active col-sm-10 right-panel float-left p-0 h-100">
+							<div class="col-sm-12 p-0 right-panel-cover floal-left h-100">
+								<div class="panel-header float-left w-100">
+									<div class="col-sm-5 mt-2 mb-2 float-left">
+										<div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+											<input type="text" class="form-control searchImg search_input" placeholder="Search Image">
+											<input type="text" class="form-control searchAud search_input" placeholder="Search Audio">
+											<input type="text" class="form-control searchVid search_input" placeholder="Search Video">
+											<input type="text" class="form-control searchObj search_input" placeholder="Search 3D object">
+										</div>
+									</div>
+									<div class="float-right filter-menu  mt-2 mb-2 pr-4 manage active"> <span class="my_favorites">
+                        <span>Media Types(All) <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+										<span> | </span>
+										</span> <span><i class="fa fa-sort-amount-desc" aria-hidden="true"></i></span>
+										<span><i class="fa fa-th-large" aria-hidden="true"></i></span>
+									</div>
+								</div>
+								<div class="panel-header float-left w-100 manage active">
+									<div class="col-sm-5 mt-2 mb-2 float-left">
+										<div class="menu-text">Site File</div>
+									</div>
+									<div class="float-right filter-menu  mt-2 mb-2 pr-4"> <span>Create new folder <i class="fa fa-folder-open-o" aria-hidden="true"></i></span>
+									</div>
+								</div>
+								<div class="panel-content w-100 pl-4 pr-0 float-left w-100 text-center manage active pt-0" style="border: none">
+									<div class="col-container h-100">
+										<div id="galleryimgs" class="col" class="style-scroll"></div>
+										<div id="galleryimgsrch" class="col" class="style-scroll"></div>
+										<div class="col text-left border-blue-l h-100 media-info">
+											<div class="close-media-info text-white"> <b>&times</b>
+											</div>
+											<!-- <img src="images/4220.jpg" alt="" width="260" height="100"> -->
+											<div class="col-sm-12 float-left">
+												<div class="pt-2 pb-2"><small>
+                          <input class="form-control" oninput="editNameAsset(this)" id='newname' type='text' name='name' value="Screenshot 2019-19-01 at 01:30:49 A" placeholder="Rename">
+                          <input type='hidden' id='elementid' value=''>
+                        </small>
+												</div>
+											</div>
+											<div class="col-sm-12 pt-2 float-left"> <small><strong>Action</strong></small>
+												<div class="border-b text-blue pb-2 "><i class="fa fa-crop" aria-hidden="true"></i>  <small>Crop</small>
+												</div>
+											</div>
+											<div class="col-sm-12 float-left">
+												<div class="w-100 float-left  pt-2 pb-2">
+                          <span class="float-left"><small><strong>Tags</strong></small></span>
+                          <span class="float-right btn-edit-tags"><small>Edit Tags</small></span>
+												</div>
+                      </div>
+                      <div class="col-sm-12 float-left edit-tags d-none">
+                          <div class="w-100 border-b float-left  pt-2 pb-2">
+                            <input onchange="editNameAsset(this)" class="form-control" id='newtags' type="text" name="tags" value="" placeholder="Enter tags" data-role="tagsinput" />
+
+                          </div>
+                      </div>
+                      <div class="col-sm-12 float-left saved-tags">
+                          <div class="w-100 border-b float-left  pt-2 pb-2">
+                            <span class="badge badge-pill badge-light btn-showmore mb-1">tag 1</span>
+                            <span class="badge badge-pill badge-light btn-showmore mb-1">tag 2</span>
+                            <span class="badge badge-pill badge-light btn-showmore mb-1">tag 3</span>
+                            <span class="badge badge-pill badge-light btn-showmore mb-1">tag 4</span>
+                            <span class="badge badge-pill badge-light btn-showmore mb-1">tag 5</span>
+                            </div>
+                        </div>
+											<div class="col-sm-12 pt-2 float-left">
+												<div class="w-100"> <span><small><strong>File Info</strong></small></span>
+												</div>
+												<div class="col-sm-12 float-left p-0">
+													<div class="w-100 float-left mb-1"> <span class="float-left"><small><strong>Type</strong></small></span>
+														<span class="float-right"><small>png</small></span>
+													</div>
+													<div class="w-100 float-left mb-1"> <span class="float-left"><small><strong>Size</strong></small></span>
+														<span class="float-right"><small>100KB</small></span>
+													</div>
+													<div class="w-100 float-left mb-1"> <span class="float-left"><small><strong>Resolution</strong></small></span>
+														<span class="float-right"><small>1000x560</small></span>
+													</div>
+													<div class="w-100 float-left mb-1"> <span class="float-left"><small><strong>Uploaded On</strong></small></span>
+														<span class="float-right"><small>22-06-2019</small></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+                </div>
+                <div class="left-panel-footer w-100">
+										<div class="btn btn-addToPage btn-addMedToPage float-right mr-4">Add To Page</div>
+									</div>
+							</div>
+						</div>
+						<div class="favourites col-sm-10 right-panel float-left p-0 h-100">
+							<div class="col-sm-12 p-0 right-panel-cover floal-left h-100">
+								<div class="panel-header float-left w-100">
+									<div class="col-sm-5 mt-2 mb-2 float-left">
+										<div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+											<input type="text" class="form-control" placeholder="Search">
+										</div>
+									</div>
+									<div class="float-right filter-menu  mt-2 mb-2 pr-4 manage active"> <span class="my_favorites">
+                        <span>Media Types(All) <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+										<span> | </span>
+										</span> <span><i class="fa fa-sort-amount-desc" aria-hidden="true"></i></span>
+										<span><i class="fa fa-th-large" aria-hidden="true"></i></span>
+									</div>
+								</div>
+								<div class="panel-content w-100 pl-4 pr-0 float-left w-100 text-center manage active pt-0" style="border: none">
+									<div class="col-container h-100">
+										<div class="col">
+											<div class="col-sm-2 float-left img-panel">
+												<div class="overlay">
+													<div class="w-100 float-left col-sm-12 p-0">
+														<div class="icons float-right mt-3 mr-2"> <i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="Remove from my favorites" aria-hidden="true"></i>
+															<i class="fa fa-ellipsis-h custom-tooltip menu-icon" aria-hidden="true">
+                                    <span class="tooltiptext">
+                                      <h5 class="w-100 float-left"><small>Add to my favorites</small><hr></h5>
+                                      <p class="w-100 float-left">Rename</p>
+                                      <p class="w-100 float-left">Crop & edit</p>
+                                      <p class="w-100 float-left"><span class="float-left">Preview</span> <span class="float-right">Space</span></p>
+                                      <p class="w-100 float-left"><span class="float-left">info Hide I</span> <span class="float-right">Clrt+I</span></p>
+
+                                      <h5 class="w-100 float-left pt-2" style="border-top: 1px solid #ccc"><small>Move To Trash</small></h5>
+                                    </span>
+                                </i>
+														</div>
+													</div>
+													<img class="w-100 pt-4 pb-4" src="https://static.wixstatic.com/media/9d7fe992a4814a7eb816b8e6b3767233.jpg/v1/fill/w_90,h_90/9d7fe992a4814a7eb816b8e6b3767233.jpg" alt="Chania" style="height: 150px!important">
+												</div>
+												<p class="mt-1 float-left w-100"><small>Image name</small>
+												</p>
+											</div>
+											<div class="col-sm-2 float-left img-panel">
+												<div class="w-100 float-left col-sm-12 p-0">
+													<div class="overlay">
+														<div class="icons float-right mt-3 mr-2"> <i class="fa fa-star" data-toggle="tooltip" data-placement="top" title="Remove from my favorites" aria-hidden="true"></i>
+															<i class="fa fa-ellipsis-h custom-tooltip menu-icon" aria-hidden="true">
+                                    <span class="tooltiptext">
+                                      <h5 class="w-100 float-left"><small>Add to my favorites</small><hr></h5>
+
+                                      <p class="w-100 float-left">Rename</p>
+                                      <p class="w-100 float-left">Crop & edit</p>
+                                      <p class="w-100 float-left"><span class="float-left">Preview</span> <span class="float-right">Space</span></p>
+                                      <p class="w-100 float-left"><span class="float-left">info Hide I</span> <span class="float-right">Clrt+I</span></p>
+
+                                      <h5 class="w-100 float-left pt-2" style="border-top: 1px solid #ccc"><small>Move To Trash</small></h5>
+                                    </span>
+                                </i>
+														</div>
+													</div>
+													<img class="w-100 pt-4 pb-4" src="https://static.wixstatic.com/media/9d7fe992a4814a7eb816b8e6b3767233.jpg/v1/fill/w_90,h_90/9d7fe992a4814a7eb816b8e6b3767233.jpg" alt="Chania" style="height: 150px!important">
+												</div>
+												<p class="mt-1 float-left w-100"><small>Image name</small>
+												</p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="markers col-sm-10 right-panel float-left p-0 h-100">
+							<div class="col-sm-12 p-0 right-panel-cover floal-left h-100">
+								<div class="panel-header float-left w-100">
+									<div class="col-sm-5 mt-2 mb-2 float-left">
+										<div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+											<input type="text" class="form-control" placeholder="Search">
+										</div>
+									</div>
+									<div class="float-right filter-menu  mt-2 mb-2 pr-4 manage active"> <span class="my_favorites">
+                        <span>Media Types(All) <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+										<span> | </span>
+										</span> <span><i class="fa fa-sort-amount-desc" aria-hidden="true"></i></span>
+										<span><i class="fa fa-th-large" aria-hidden="true"></i></span>
+									</div>
+								</div>
+								<div class="panel-content pl-4 pr-4 float-left w-100 explore">
+
+									<div id="gallerymarkers" class="row m-0 mt-4 float-left w-100 style-scroll albums-media" style="height: 420px"></div>
+									<div class="left-panel-footer w-100">
+											<button id='buttonDownloadFullImage' class='btn btn-addToPage float-left pull-left'>Download Image</button>
+											<div id="buttonDownloadEncoded" class="btn btn-addToPage btn-addMedToPage float-right mr-4">Save Changes</div>
+										<div class="btn btn-addToPage float-right mr-4" onclick="markerless(this)">Go MarkerLess</div>
+
+										<label id='buttonUpload' for='fileinput' class="btn btn-addToPage float-right mt-4 mr-4">
+												<input type='file' id='fileinput' style='display: none' accept='image/*'>Upload New Marker</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="unsplash col-sm-10 right-panel float-left p-0 h-100">
+							<div class="col-sm-12 p-0 right-panel-cover floal-left h-100">
+								<div class="panel-header float-left w-100">
+									<div class="col-sm-5 mt-2 mb-2 float-left">
+										<div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+											<input type="text" class="form-control unsplash_srch_new" placeholder="Search images from unsplash">
+										</div>
+									</div>
+								</div>
+								<div class="panel-content pl-4 pr-4 float-left w-100 explore">
+									<h2 class="mt-4 mb-1 float-left w-100">Media From Unsplash</h2>
+									<p class="float-left w-100">Choose from 1000s of stunnig images</p>
+									<div class="float-left w-100"> <span>Filter By:</span>
+										<button type="button" class="btn btn-outline-primary mr-2 ml-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+										</button>
+										<button type="button" class="btn btn-outline-primary mr-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+										</button>
+										<button type="button" class="btn btn-outline-primary mr-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+										</button>
+									</div>
+									<div class="row m-0 mt-4 float-left w-100 style-scroll" id="unsplashImgs"></div>
+									<div class="left-panel-footer w-100">
+										<div class="btn btn-addToPage btn-addMedToPage float-right mr-4">Add To Page</div>
+									</div>
+								</div>
+							</div>
+            </div>
+            <div class="googlepoly col-sm-10 right-panel float-left p-0 h-100">
+                <div class="col-sm-12 p-0 right-panel-cover floal-left h-100">
+                  <div class="panel-header float-left w-100">
+                    <div class="col-sm-5 mt-2 mb-2 float-left">
+                      <div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control searchGooglePoly" placeholder="Search 3D objects fro googlepoly">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel-content pl-4 pr-4 float-left w-100 explore">
+                    <h2 class="mt-4 mb-1 float-left w-100">Media From Unsplash</h2>
+                    <p class="float-left w-100">Choose from 1000s of stunnig images</p>
+                    <div class="float-left w-100"> <span>Filter By:</span>
+                      <button type="button" class="btn btn-outline-primary mr-2 ml-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary mr-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      </button>
+                      <button type="button" class="btn btn-outline-primary mr-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+                      </button>
+                    </div>
+					<div class="row m-0 mt-4 float-left w-100 style-scroll googlepolyImgs"></div>
+					<div class="row m-0 mt-4 float-left w-100 style-scroll googlepoly_srch"></div>
+                    <div class="left-panel-footer w-100">
+                      <div class="btn btn-addToPage btn-addMedToPage float-right mr-4">Add To Page</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="FS_panel col-sm-10 right-panel float-left p-0 h-100">
+                  <div class="col-sm-12 p-0 right-panel-cover floal-left h-100">
+                    <div class="panel-header float-left w-100">
+                      <div class="col-sm-5 mt-2 mb-2 float-left">
+                        <div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+                          <input type="text" class="form-control searchFS" placeholder="Search Sound From Free Sounds">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel-content pl-4 pr-4 float-left w-100 explore">
+                      <h2 class="mt-4 mb-1 float-left w-100">Media From Unsplash</h2>
+                      <p class="float-left w-100">Choose from 1000s of stunnig images</p>
+                      <div class="float-left w-100"> <span>Filter By:</span>
+                        <button type="button" class="btn btn-outline-primary mr-2 ml-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary mr-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-primary mr-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </button>
+                      </div>
+					  <div class="row m-0 mt-4 float-left w-100 style-scroll free_sound"></div>
+					  <div class="row m-0 mt-4 float-left w-100 style-scroll free_sound_srch">
+
+					  </div>
+                      <div class="left-panel-footer w-100">
+                        <div class="btn btn-addToPage btn-addMedToPage float-right mr-4">Add To Page</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="youtube_panel col-sm-10 right-panel float-left p-0 h-100">
+                    <div class="col-sm-12 p-0 right-panel-cover floal-left h-100">
+                      <div class="panel-header float-left w-100">
+                        <div class="col-sm-5 mt-2 mb-2 float-left">
+                          <div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+                            <input type="text" class="form-control searchYT" placeholder="Search videos from youtube">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel-content pl-4 pr-4 float-left w-100 explore">
+                        <h2 class="mt-4 mb-1 float-left w-100">Media From Unsplash</h2>
+                        <p class="float-left w-100">Choose from 1000s of stunnig images</p>
+                        <div class="float-left w-100"> <span>Filter By:</span>
+                          <button type="button" class="btn btn-outline-primary mr-2 ml-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+                          </button>
+                          <button type="button" class="btn btn-outline-primary mr-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+                          </button>
+                          <button type="button" class="btn btn-outline-primary mr-2">Primary <i class="fa fa-angle-down" aria-hidden="true"></i>
+                          </button>
+                        </div>
+						<div class="row m-0 mt-4 float-left w-100 style-scroll you_tube"></div>
+						<div class="row m-0 mt-4 float-left w-100 style-scroll you_tube_srch"></div>
+                        <div class="left-panel-footer w-100">
+                          <div class="btn btn-addToPage btn-addMedToPage float-right mr-4">Add To Page</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal " id="choosemarker" tabindex="-1" role="dialog" aria-labelledby="assetsTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<br>
+				<div class="modal-body">
+					<div class='mdl-grid'>
+						<div class='mdl-cell mdl-cell--4-col'>
+							<!-- <label id='buttonUpload' for='fileinput' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>
+								<input type='file' id='fileinput' style='display: none' accept='image/*'>Upload</label> -->
+						</div>
+						<div class='mdl-cell mdl-cell--6-col'>
+							<label id='markerless' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>
+								<button onclick='markerless(this);'>GO MARKERLESS</button>
+							</label>
+						</div>
+						<div class='mdl-cell mdl-cell--6-col' style='display:none;'>
+							<label class="mdl-js-ripple-effect" for="patternRatioSlider"> <span class="">Pattern Ratio 0.50</span>
+								<input id='patternRatioSlider' class="mdl-slider mdl-js-slider" type="range" min="10" max="90" value="50">
+							</label>
+							<div class='mdl-tooltip' for='patternRatioSlider'>Set size of inner image vs black border</div>
+						</div>
+						<div class='mdl-cell mdl-cell--9-col'>
+							<button id='buttonDownloadEncoded' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent' style="margin-right: 12%;">Save Marker</button>
+							<button id='buttonDownloadFullImage' class='mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'>Download Image</button>
+						</div>
+						<div class='mdl-grid'>
+							<div class='mdl-cell mdl-cell--3-col'>
+								<div id='imageContainer' class='markercanvas'></div>
+							</div>
+							<div class='mdl-cell mdl-cell--3-col'></div>
+						</div>
+					</div>
+					<!-- <div id='gallerymarkers'>
+						<img src='marker/hiro.png' onclick='resetMarker(this);' width='150px' style='padding:5px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);'>
+					</div> -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="modal " id="share" tabindex="-1" role="dialog" aria-labelledby="assetsTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="form0" enctype="multipart/form-data" method="post">
+						<input id='auth' name="authtoken" type="hidden" value="">
+						<label>Name :</label>
+						<input id="" name="name" type="text">
+						<br>
+						<label style='position: relative;top: -15px;'>Description :</label>&Tab;
+						<textarea id="" name="description" type="textarea"></textarea>
+						<input type="hidden" name="submit" value="1">
+						<br>
+						<label>Tags :</label>&nbsp;
+						<input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" />
+						<input type="hidden" name='experience' id='exptxt'>
+					</form>
+					<button type="button" onclick="sharelnk(this)" style='width:200px;' class="uploadbut">Get sharable link</button>
+					<input type='text' id='shrlnk' placeholder='Sharing Link'>
+					<button type="button" onclick="gotolink()" style='width:10px;'><i class="fa fa-external-link"></i>
+					</button>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+  </div> -->
+  <div class="modal fade modal-custom" id="modal-upload-media" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-xs">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header bg-blue text-white">
+            <h5 class="modal-title">Choose Media Files</h5>
+            <div class="btn-close m-0" data-dismiss="modal">×</div>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body p-0">
+            <div class="col-sm-12" id="tabs-container">
+                <div class="woocommerce-tabs">
+                  <ul class="tabs nav nav-tabs mt-3">
+                    <li class="nav-item">
+                      <a class="nav-link upload-pc active" href="#tab-pc-upload"><i class="fa fa-desktop" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link upload-drive" href="#tab-drive-upload">
+                        <svg width="26" height="22" viewBox="0 0 26 22" class="symbol symbol-media-manager-panel-googledrive-icon"><g fill="none"><path fill="#537ABD" d="M25.564 14.929H8.453L4.564 22h16.868"></path><path fill="#2EB672" d="M9.304 0L.748 14.143 4.638 22l8.338-15.443"></path><path fill="#FED14B" d="M17.082 0H9.304l8.36 14.929h7.973L17.082 0"></path></g></svg>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link upload-link" href="#tab-ext-link"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link upload-3d" href="#tab-3d-files"><i class="fa fa-cube"></i></a>
+                    </li>
+                  </ul>
+                  <div class="panel entry-content tab-pane" id="tab-pc-upload">
+                    <div class="col-sm-12 p-0 h-100 float-left pb-4">
+                      <!-- <div class="panel-content offset-sm-2 col-sm-8 mt-5 p-4 mb-4 float-left w-100 text-center"> -->
+                        <!-- <input id="fileid" type="file" hidden="">
+                        <div class="mb-2">Drag &amp; Drop File</div>
+                        <div class="mb-2">Or</div>
+                        <button class="btn btn-primary btn-upload-media btn-round-blue mb-4">Upload from Computer</button> -->
+
+
+                          <!-- <form id="form" enctype="multipart/form-data" method="post">
+                              <input id='auth2' name="authtoken" type="hidden" value="">
+                               <input id="image" type="file" accept='image/*'> -->
+                              <!-- <input type="hidden" name="create" value="1">
+                              <input type="hidden" name="type" value="image">
+                              <img style="display: none" id="my-image" src="#" /> -->
+                              <!-- <input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" /> -->
+                              <!-- <input type="file" name="image" id="image" required="required" multiple="multiple" accept='image/*' /> -->
+                          <!-- </form> -->
+                            <!-- <div class="form-group panel-content offset-sm-2 col-sm-8 mt-5 mb-4 float-left w-100 text-center file-area">
+                              <input type="file" name="image" id="image" required="required" multiple="multiple" accept='image/*' />
+                              <div class="file-dummy">
+                                <div class="success">Great, your files are selected. Keep on.</div>
+                                <div class="default">Please select some files</div>
+                              </div>
+                            </div>
+                            <div class="form-group float-left w-100 text-center"> -->
+                              <!-- <button id="use" type="button" class="btn btn-primary btn-upload-media btn-round-blue mb-4" type="submit">Upload images</button> -->
+                            <!-- </div>
+                          </form> -->
+
+                      </div>
+                    <!-- </div> -->
+                  </div>
+                  <div class="panel entry-content tab-pane " id="tab-drive-upload" style="display: none;">
+                    <div class="col-sm-12 p-0 h-100 float-left pb-4">
+                      <div class="panel-content offset-sm-2 col-sm-8 mt-3 pl-4 pr-4 float-left w-100 text-center">
+                        <img class="_1kxZ_" src="https://static.parastorage.com/services/media-manager-g6/1.822.0/media/SiteFiles.svg" data-hook="image-element"><br>
+                        <input id="fileid" type="file" hidden="">
+                        <button class="btn btn-primary btn-upload-media btn-round-blue mb-4">Connect Google Drive</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="panel entry-content tab-pane pb4" id="tab-ext-link" style="display: none;">
+                    <div class="col-sm-12 p-0 h-100 float-left pb-4">
+                      <div class="panel-content offset-sm-2 col-sm-8 mt-3 pl-4 pr-4 float-left w-100 text-center">
+                        <img class="_1kxZ_" src="https://static.parastorage.com/services/media-manager-g6/1.822.0/media/SiteFiles.svg" data-hook="image-element"><br>
+                        <input id="fileid" type="file" hidden="">
+                        <p>Upload a file from URL</p>
+                        <div class="form-group has-search m-4">
+                          <input type="text" class="form-control" placeholder="eg. business, fashion, fitness">
+                        </div>
+                      </div>
+                    </div>
+				  </div>
+				  <form id="form2" enctype="multipart/form-data" method="post" >
+					<div style="display: none">
+					<input id='auth3' name="authtoken" type="hidden" value="">
+					<input type="hidden" name="create" value="1">
+					<!-- <label>Name :</label>
+					<input name="name"> -->
+					<!-- <br> -->
+					<!-- <label>Thumbnail :</label>
+					<input type="file" name="thumbnail" placeholder="thumbnail"> -->
+					<!-- <label class="obj">Object File :</label>
+					<input class="obj" type="file" name="obj" placeholder="object file">
+					<label class="mtl">Material file :</label>
+					<input type="file" name="mtl" class="mtl" placeholder="material file"> -->
+					<select id="3d-type" name="type" class='type'>
+						<option value="obj">Obj</option>
+						<option value="gltf">gltf</option>
+						<option value="fbx">fbx</option>
+						<option value="zip">zip</option>
+					</select>
+					<!-- <input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" /> -->
+				</div>
+                  <div class="panel entry-content tab-pane pb4 text-center" id="tab-3d-files" style="display: none;" none;>
+                     <ul id="tab-container" class="nav nav-pills hr-divider-content hr-divider-nav mt-3">
+                          <li class="nav-item">
+                              <a class="nav-link active" value="zip" data-toggle="pill" href="#upload-zip" aria-expanded="false"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> ZIP</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" value="obj" data-toggle="pill" href="#upload-obj-mtl" aria-expanded="true"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> OBJ/MTL</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" value="fbx" data-toggle="pill" href="#upload-fbx" aria-expanded="false"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> FBX</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" value="gltf" data-toggle="pill" href="#upload-gltf" aria-expanded="false"><i class="fa fa-dot-circle-o" aria-hidden="true"></i> GLTF</a>
+                          </li>
+                      </ul>
+                      <div class="tab-content">
+                          <div id="upload-zip" class="tab-pane nav-link highlight active" aria-expanded="true">
+                            <div class="col-sm-12 float-left h-100">
+                              <!-- <div class="b-dahsed-blue panel-content  mt-3 p-4 mb-4 float-left w-100 text-center">
+                                <h1>ZIP</h1>
+                                <input id="fileid" type="file" hidden="">
+                                <p>Drag &amp; Drop File</p>
+                                <p>Or</p>
+                                <button class="btn btn-primary btn-upload-media btn-round-blue mb-4">Upload from Computer</button>
+							  </div> -->
+							  <div class="form-group panel-content offset-sm-2 col-sm-8 mt-5 mb-4 float-left w-100 text-center file-area">
+									<h1>ZIP</h1>
+									<input type="file" name="image" id="image1" required="required" multiple="multiple" accept='image/*' />
+									<div class="b-dahsed-blue file-dummy">
+									  <div class="success">Great, your files are selected. Keep on.</div>
+									  <div class="default">Please select some files</div>
+									</div>
+								  </div>
+                            </div>
+                          </div>
+                          <div id="upload-obj-mtl" class="tab-pane nav-link highlight" aria-expanded="false">
+                            <div class="col-sm-12 p-0 h-100 float-left pb-4">
+                              <div class="col-sm-6 float-left h-100">
+									<div class="form-group panel-content offset-sm-2 col-sm-8 mt-5 mb-4 float-left w-100 text-center file-area">
+										<h1>OBJ</h1>
+										<input class="obj-file obj" type="file"  name="obj" required="required" />
+										<div class="b-dahsed-blue file-dummy">
+											<div class="success">Great, your files are selected. Keep on.</div>
+											<div class="default">Please select some files</div>
+										</div>
+									</div>
+                              </div>
+                              <div class="col-sm-6 float-left h-100">
+									<div class="form-group panel-content offset-sm-2 col-sm-8 mt-5 mb-4 float-left w-100 text-center file-area">
+										<h1>MTL</h1>
+										<input class="obj-file mtl" type="file"  name="mtl" required="required" />
+										<div class="b-dahsed-blue file-dummy">
+											<div class="success">Great, your files are selected. Keep on.</div>
+											<div class="default">Please select some files</div>
+										</div>
+									</div>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="upload-fbx" class="tab-pane nav-link highlight" aria-expanded="false">
+                            <div class="col-sm-12 float-left h-100">
+									<div class="form-group panel-content offset-sm-2 col-sm-8 mt-5 mb-4 float-left w-100 text-center file-area">
+										<h1>FBX</h1>
+										<input class="obj-file gltf" type="file"  name="fbx" required="required" />
+										<div class="b-dahsed-blue file-dummy">
+											<div class="success">Great, your files are selected. Keep on.</div>
+											<div class="default">Please select some files</div>
+										</div>
+									</div>
+                            </div>
+                          </div>
+                          <div id="upload-gltf" class="tab-pane nav-link highlight" aria-expanded="false">
+                            <div class="col-sm-12 float-left h-100">
+
+										<div class="form-group panel-content offset-sm-2 col-sm-8 mt-5 mb-4 float-left w-100 text-center file-area">
+												<h1>GLTF</h1>
+												<input class="obj-file gltf" type="file"  name="gltf" required="required" />
+												<div class="b-dahsed-blue file-dummy">
+													<div class="success">Great, your files are selected. Keep on.</div>
+													<div class="default">Please select some files</div>
+												</div>
+											</div>
+                            </div>
+                          </div>
+                      </div>
+				  </div>
+				</form>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+	<div class="modal " id="images" tabindex="-1" role="dialog" aria-labelledby="assetsTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+					<br>
+					<ul class="nav nav-tabs ">
+						<li class="active col-lg-6">
+							<a data-toggle="tab" href="#gallery">
+								<center>MY Gallery</center>
+							</a>
+						</li>
+						<li class="col-lg-6">
+							<a data-toggle="tab" href="#unsplash">
+								<center>Unsplash</center>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div id='assetbody' onscroll="fetchnew()" class="modal-body">
+					<div class="tab-content">
+						<div id="gallery" class="tab-pane  in active">
+							<input id='searchasset' type="search" class="searchbar" autocomplete="on" onsubmit="searchImg(this)">
+							<!-- <form id="form" enctype="multipart/form-data" method="post">
+								<input id='auth2' name="authtoken" type="hidden" value="">
+								<input id="image" type="file" accept='image/*'>
+								<input type="hidden" name="create" value="1">
+								<input type="hidden" name="type" value="image">
+								<img id="my-image" src="#" />
+								<br>
+								<br>
+								<br>
+								<input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" />
+							</form>
+							<button id="use" type="button" class="uploadbut" >Upload Image</button> -->
+							<br>
+							<br>
+							<div class="demo"></div>
+							<!-- <div id='galleryimgs'></div> --></div>
+						<div id="unsplash" class="tab-pane ">
+							<input type="search" class="searchbar" autocomplete="on" onsubmit="searchImg(this)">
+							<!-- <div id="unsplashImgs"></div> -->
+							<br>
+							<br>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary close" data-dismiss="modal"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal " id="assets" tabindex="-1" role="dialog" aria-labelledby="assetsTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+					<br>
+					<ul class="nav nav-tabs ">
+						<li class="active col-lg-6">
+							<a data-toggle="tab" href="#modelsGallery">
+								<p style="text-align:center;">MY Gallary</p>
+							</a>
+						</li>
+						<li class="col-lg-6">
+							<a data-toggle="tab" href="#googlePoly">
+								<p style="text-align:center;">Google Poly</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div id='assetbody' onscroll="fetchnew()" class="modal-body">
+					<div class="tab-content">
+						<div id="modelsGallery" class="tab-pane  in active">
+							<input id='searchasset' type="search" class="searchbar" autocomplete="on" onsubmit="searchImg(this)">
+							<!-- <form id="form2" enctype="multipart/form-data" method="post">
+								<input id='auth3' name="authtoken" type="hidden" value="">
+								<input type="hidden" name="create" value="1">
+								<label>Name :</label>
+								<input name="name">
+								<br>
+								<label>Thumbnail :</label>
+								<input type="file" name="thumbnail" placeholder="thumbnail">
+								<label class="obj">Object File :</label>
+								<input class="obj" type="file" name="obj" placeholder="object file">
+								<label class="mtl">Material file :</label>
+								<input type="file" name="mtl" class="mtl" placeholder="material file">
+								<select name="type" class='type' onchange="updatetype(this);">
+									<option value="obj">Obj</option>
+									<option value="gltf">gltf</option>
+									<option value="fbx">fbx</option>
+									<option value="zip">zip</option>
+								</select>
+								<input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" />
+							</form>
+							<button type="button" onclick="uploadObj()" class="uploadbut">Upload Object</button> -->
+							<br>
+							<br>
+							<div id='galleryobjs'></div>
+						</div>
+						<div id="googlePoly" class="tab-pane">
+							<input type="search" class="searchGooglePoly searchbar" autocomplete="on" onsubmit="searchImg(this)">
+							<div id="googlePolyImgs"></div>
+							<br>
+							<br>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary close" data-dismiss="modal"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="txt" tabindex="-1" role="dialog" aria-labelledby="assetsTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="txtTitle">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<input id='phrase' onkeyup="phrasechanged(this)" type="text" placeholder="TEXT">
+					<br>
+					<div id='phrcol' onclick="editphr()" title="Button Color" style="background-color:crimson;height: 10px;
+            width: 30px;display: -webkit-inline-box;border:#d3d3d3;border-style: solid;
+            border-width: 0.5px;"></div>
+					<div id='phrcolor'></div>
+					<select id='aligntxt'>
+						<option value='left'>left</option>
+						<option value='right'>right</option>
+						<option value='center'>center</option>
+					</select>
+					<br> <span class='col-lg-3 phrasetxt' onclick='pushTxt(this)' style='color:crimson;font-family:orbitron;cursor:pointer;max-width:10px;'>Orbitron</span>
+					<br> <span class='col-lg-3 phrasetxt' onclick='pushTxt(this)' style='color:crimson;font-family:roboto;cursor:pointer;'>Roboto</span>
+					<br> <span class='col-lg-3 phrasetxt' onclick='pushTxt(this)' style='color:crimson;font-family:leaguemono;cursor:pointer;'>League Mono</span>
+					<br> <span class='col-lg-3 phrasetxt' onclick='pushTxt(this)' style='color:crimson;font-family:knewave;cursor:pointer;'>Knewave</span>
+					<br> <span class='col-lg-3 phrasetxt' onclick='pushTxt(this)' style='color:crimson;font-family:yatraone;cursor:pointer;'>Yatra One</span>
+					<br> <span class='col-lg-3 phrasetxt' onclick='pushTxt(this)' style='color:crimson;font-family:greatvibes;cursor:pointer;'>Great Vibes</span>
+					<br> <span class='col-lg-3 phrasetxt' onclick='pushTxt(this)' style='color:crimson;font-family:amita;cursor:pointer;'>Amita</span>
+					<br>
+					<br>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal " id="music" tabindex="-1" role="dialog" aria-labelledby="assetsTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="assetsTitle">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+					<br>
+					<ul class="nav nav-tabs ">
+						<li class="active col-lg-6">
+							<a data-toggle="tab" href="#audgallery">
+								<center>MY Gallery</center>
+							</a>
+						</li>
+						<li class="col-lg-6">
+							<a data-toggle="tab" href="#audApidiv">
+								<center>Free Sound</center>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-body">
+					<div class="tab-content">
+						<div id="audgallery" class="tab-pane  in active">
+							<input id='searchasset' type="search" class="searchbar" autocomplete="on" onsubmit="searchImg(this)">
+							<form id="form4" enctype="multipart/form-data" method="post">
+								<input id='auth4' name="authtoken" type="hidden" value="">
+								<label>Name :</label>
+								<input id="audioname" name="audio" type="text">
+								<br>
+								<label>Audio :</label>
+								<input id="audio" name="audio" type="file">
+								<label>Thumbnail :</label>
+								<input id="audiothumb" name="thumbnail" type="file">
+								<input type="hidden" name="create" value="1">
+								<input type="hidden" name="type" value="audio">
+								<br>
+								<input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" />
+							</form>
+							<button type="button" onclick="uploadAud()" class="uploadbut">Upload Audio</button> -->
+							<br>
+							<br>
+							<br>
+							<br>
+							<div id='galleryauds'></div>
+						</div>
+						<div id="audApidiv" class="tab-pane ">
+							<input type="search" class="searchFS searchbar" autocomplete="on" onsubmit="searchFS(this)">
+							<div id="fsImgs"></div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='audioModal' class='modal' tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+					<button type="button" id="audBtnUnpushed" onclick='audBtnUnpushed(this);' data-dismiss="modal" class="close"> <i class="fa fa-trash"></i> &nbsp;&nbsp;&nbsp;</button>
+					<button type="button" class="close" id="audBtnPlayModal" onclick='playAudio(this);'> <i class="fa fa-play"></i> &nbsp;&nbsp;&nbsp;</button>
+					<br>
+				</div>
+				<div class="modal-body"></div>
+			</div>
+		</div>
+	</div>
+	<div class="modal " id="cta" tabindex="-1" role="dialog" aria-labelledby="assetsTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="assetsTitle">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			 <div class="modal-body">
+					<!-- <label>Preview: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><a id='ctabutton' href="" style="color:#FFF;background-color:#4846ae;padding: 8px;font-family:FontAwesome, Arial;">Text</a> -->
+					<br>
+					<br>
+					<br>
+					<div id='backcol' onclick="editback()" title="Button Color" style="background-color:#4846ae;height: 10px;
+        width: 30px;display: -webkit-inline-box;border:#d3d3d3;border-style: solid;
+    border-width: 0.5px;"></div>
+					<div id='backcolor'></div>
+					<div id='butcol' onclick="editcol()" title="Text Color" style="background-color:#ffffff;height: 10px;
+        width: 30px;display: -webkit-inline-box; border:#d3d3d3;border-style: solid;
+    border-width: 0.5px;"></div>
+					<div id='butcolor'></div>
+					<br>
+					<!-- <select id='buticn' onchange="chgtxt(this)" style="font-family:FontAwesome, Arial; padding: 8px;">
+						<option></option>
+						<option>&#xf060</option>
+						<option>&#xf061</option>
+						<option>&#xf062</option>
+						<option>&#xf063</option>
+						<option>&#xf000</option>
+						<option>&#xf001</option>
+						<option>&#xf002</option>
+						<option>&#xf003</option>
+						<option>&#xf004</option>
+						<option>&#xf005</option>
+						<option>&#xf006</option>
+						<option>&#xf007</option>
+						<option>&#xf008</option>
+						<option>&#xf009</option>
+						<option>&#xf00a</option>
+						<option>&#xf00b</option>
+						<option>&#xf00c</option>
+						<option>&#xf00d</option>
+						<option>&#xf00e</option>
+						<option>&#xf00f</option>
+					</select> -->
+					<!-- <input id="buttext" type="text" placeholder="Text" onchange="chgtxt(this)" onkeyup="chgtxt(this)" onfocus="msg()" maxlength="8"> -->
+					<p id="xx">...</p>
+					<input id='butlink' type="text" placeholder="http://" onchange="chglnk(this)">
+					<input title="Roundness of Button" type="range" min="1" max="50" value="0" class="slider" id="butround" oninput="chground(this)">
+					<br>
+					<br>
+					<!-- <button onclick="addbut(this);" data-dismiss="modal" style="right:10px; background-color: #d3d3d3;padding: 8px; float: right;">OK</button> -->
+				</div>
+				<div style="height:60px;width:100%;"></div>
+			</div>
+		</div>
+	</div>
+	<div id='ctaModal' class='modal' tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+					<button type="button" id="ctaBtnUnpushed" onclick='ctaUnpushed(this);' data-dismiss="modal" class="close"> <i class="fa fa-trash"></i> &nbsp;&nbsp;&nbsp;</button>
+					<button type="button" class="close" id="ctaBtnGo" onClick='linkvisit()'> <i class="fa fa-play"></i> &nbsp;&nbsp;&nbsp;</button>
+					<br>
+				</div>
+				<div class="modal-body"></div>
+			</div>
+		</div>
+	</div>
+	<div class="modal " id="videos" tabindex="-1" role="dialog" aria-labelledby="assetsTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+					<br>
+					<ul class="nav nav-tabs ">
+						<li class="active col-lg-6">
+							<a data-toggle="tab" href="#vidgallery">
+								<center>MY Gallery</center>
+							</a>
+						</li>
+						<li class="col-lg-6">
+							<a data-toggle="tab" href="#ytdiv">
+								<center>YouTube</center>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div id='videobody' onscroll="" class="modal-body">
+					<div class="tab-content">
+						<div id="vidgallery" class="tab-pane  in active">
+							<input id='searchasset' type="search" class="searchbar" autocomplete="on" onsubmit="searchImg(this)">
+							<!-- <form id="form6" enctype="multipart/form-data" method="post">
+								<input id='auth5' name="authtoken" type="hidden" value="">
+								<label>Name :</label>
+								<br>
+								<input id="videoname" name="name">
+								<br>
+								<label>Video :</label>
+								<input id="video" name="video" type="file">
+								<label>Thumbnail :</label>
+								<input id="videothumb" name="thumbnail" type="file">
+								<input type="hidden" name="create" value="1">
+								<label>Is this a 360 video? :</label>
+								<input type='hidden' id='vidtype' name='type' value="2D">
+								<input type='checkbox' onclick="chgvidtype(this);">
+								<br>
+								<br>
+								<input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" />
+							</form>
+							<button type="button" onclick="uploadVid(this)" class="uploadbut">Upload Video</button> -->
+							<br>
+							<br>
+							<div class="demo"></div>
+							<div id='galleryvids'></div>
+						</div>
+						<div id="ytdiv" class="tab-pane ">
+							<input type="search" class="searchYT searchbar" autocomplete="on" onsubmit="searchYT(this)">
+							<div id="ytImgs"></div>
+							<br>
+							<br>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary close" data-dismiss="modal"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='ytmodal' class='modal' tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" onclick='ytremove(this);' class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+					<button type="button" id="ytBtnUnpushed" onclick='ytUnpushedVideo(this);' data-dismiss="modal" class="close"> <i class="fa fa-trash"></i> &nbsp;&nbsp;&nbsp;</button>
+					<br>
+				</div>
+				<div class="modal-body">
+					<iframe id='ytembed' src='' width="100%" height="60%" frameborder=0px allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <div id='editmodal' class='modal' tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span>
+					</button>
+					<br>
+				</div>
+				<div class="modal-body">
+					<label>Name :</label>&nbsp;
+					<input id='newname' type='text' name='name'>
+					<br>
+					<label>Tags :</label>&nbsp;
+					<input id='newtags' type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" />
+					<input type='hidden' id='elementid' value=''>
+					<br>
+					<button onclick='editNameAsset(this)'>Edit</button>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<!-- left and right meanu bars -->
+	<section class="vertical-bars" id="vertical-bars">
+		<div class="left-fixed-bar">
+			<div class="left-bar-item 3d_assets" panel-name=".3D-modal-panel"> <i class="fa fa-cube"></i>
+			</div>
+			<div class="left-bar-item video_assets" panel-name=".video-panel"> <i class="fa fa-video-camera" aria-hidden="true"></i>
+			</div>
+			<div class="left-bar-item audio_assets" panel-name=".audio-panel"> <i class="fa fa-volume-up" aria-hidden="true"></i>
+			</div>
+			<div class="left-bar-item menu-left" panel-name=".image-panel"> <i class="fa fa-picture-o" aria-hidden="true"></i>
+			</div>
+			<div class="left-bar-item menu-left" panel-name=".text-panel"> <i class="fa fa-text-width" aria-hidden="true"></i>
+			</div>
+			<div class="left-bar-item menu-left" panel-name=".cta-panel"> <i class="fa fa-square" aria-hidden="true"></i>
+			</div>
+		</div>
+		<div class="left-bar-panel 3D-modal-panel">
+			<div class="panel-indicators">
+				<div class="indicator selected">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext"><b>Upload Your Media</b><br><br>Add any media you want from your computer or social accounts. </span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Wix Free Images</span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Wix Free Videos</span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Shutterstock Images </span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Shutterstock Videos</span>
+					</div>
+				</div>
+			</div>
+			<div class="bar-cover">
+				<div class="left-bar-header">
+					<div class="title border-b  padding-l-24">3D Modal
+						<div class="btn-close btn-close-panel">&times;</div>
+					</div>
+				</div>
+				<div class="search-block border-b">
+					<div class="padding-panel">
+						<p>What are you looking for?</p>
+						<div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+							<input type="text" class="form-control" placeholder="eg. business, fashion, fitness">
+						</div>
+					</div>
+				</div>
+				<div class="panel-content padding-panel style-scroll">
+					<div class="content-container">
+						<div class="content mb-3">
+							<div class="content-title">Upload Your media</div>
+							<div class="media-options">
+
+								<div class="m-option upload-3d-media bg-blue" tab=".upload-3d" data-container="body" data-toggle="popover" data-placement="top" data-content="Upload Media">
+									<svg width="19" height="19" viewBox="0 0 19 19" class="symbol symbol-upload-btn">
+										<g fill-rule="evenodd">
+											<path d="M9 4.5V14h1V4.5L12.5 7l.5-.625L9.5 3 6 6.375 6.5 7 9 4.5z"></path>
+											<path d="M16 14.5c0 .827-.673 1.5-1.5 1.5h-10c-.827 0-1.5-.673-1.5-1.5V9H2v5.5C2 15.878 3.122 17 4.5 17h10c1.378 0 2.5-1.122 2.5-2.5V9h-1v5.5z"></path>
+										</g>
+									</svg>
+								</div>
+								<div class="m-option g-drive-upload"  tab=".upload-drive" data-container="body" data-toggle="popover" data-placement="top" data-content="Google Drive">
+									<svg width="26" height="22" viewBox="0 0 26 22" class="symbol symbol-media-manager-panel-googledrive-icon">
+										<g fill="none">
+											<path fill="#537ABD" d="M25.564 14.929H8.453L4.564 22h16.868"></path>
+											<path fill="#2EB672" d="M9.304 0L.748 14.143 4.638 22l8.338-15.443"></path>
+											<path fill="#FED14B" d="M17.082 0H9.304l8.36 14.929h7.973L17.082 0"></path>
+										</g>
+									</svg>
+								</div>
+								<div class="m-option me-opt" tab=".upload-link" data-container="body" data-toggle="popover" data-placement="top" data-content="Link"> <i class="fa fa-link"></i>
+								</div>
+							</div>
+						</div>
+						<div class="content mb-3">
+							<div class="content-title">Gallery</div>
+							<div class="images-options 3d-gallery-thumb" ></div>
+							<div class="bar-body text-center"> <span id="" class="badge badge-pill badge-light btn-showmore g_poly asset_3d btn-showmore-3d" show_srch=".searchObj" show-panel=".gallery_media">show more</span>
+							</div>
+						</div>
+						<div class="content mb-3">
+							<div class="content-title" >Google Poly</div>
+							<div class="images-options 3d-g_poly-thumb"></div>
+							<div class="bar-body text-center"> <span  class="badge badge-pill badge-light btn-showmore g_poly asset_3d" show-panel=".googlepoly_media">show more</span>
+							</div>
+						</div>
+						<div class="panel-footer text-center">
+							<button class="btn btn-primary btn-upload-media btn-round-blue">Upload Media</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="left-bar-panel video-panel">
+			<div class="panel-indicators">
+				<div class="indicator selected">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext"><b>Upload Your Media</b><br><br>Add any media you want from your computer or social accounts. </span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Wix Free Images</span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Wix Free Videos</span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Shutterstock Images </span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Shutterstock Videos</span>
+					</div>
+				</div>
+			</div>
+			<div class="bar-cover">
+				<div class="left-bar-header">
+					<div class="title border-b  padding-l-24">Video
+						<div class="btn-close btn-close-panel">&times;</div>
+					</div>
+				</div>
+				<div class="search-block border-b">
+					<div class="padding-panel">
+						<p>What are you looking for?</p>
+						<div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+							<input type="text" class="form-control" placeholder="eg. business, fashion, fitness">
+						</div>
+					</div>
+				</div>
+				<div class="panel-content padding-panel style-scroll">
+					<div class="content-container">
+						<div class="content mb-3">
+							<div class="content-title">Upload Your media</div>
+							<div class="media-options">
+									<form id="form6" enctype="multipart/form-data" method="post" style="display: none">
+										<input id='auth5' name="authtoken" type="hidden" value="">
+										<!-- <label>Name :</label>
+										<br>
+										<input id="videoname" name="name">
+										<br>
+										<label>Video :</label> -->
+										<input id="video" name="video" type="file">
+										<!-- <label>Thumbnail :</label>
+										<input id="videothumb" name="thumbnail" type="file"> -->
+										<input type="hidden" name="create" value="1">
+										<!-- <label>Is this a 360 video? :</label>
+										<input type='hidden' id='vidtype' name='type' value="2D">
+										<input type='checkbox' onclick="chgvidtype(this);"> -->
+										<!-- <br>
+										<br> -->
+										<!-- <input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" /> -->
+									</form>
+
+								<div class="m-option me-upload-vid bg-blue" tab=".upload-pc" data-container="body" data-toggle="popover" data-placement="top" data-content="Upload Media">
+									<svg width="19" height="19" viewBox="0 0 19 19" class="symbol symbol-upload-btn">
+										<g fill-rule="evenodd">
+											<path d="M9 4.5V14h1V4.5L12.5 7l.5-.625L9.5 3 6 6.375 6.5 7 9 4.5z"></path>
+											<path d="M16 14.5c0 .827-.673 1.5-1.5 1.5h-10c-.827 0-1.5-.673-1.5-1.5V9H2v5.5C2 15.878 3.122 17 4.5 17h10c1.378 0 2.5-1.122 2.5-2.5V9h-1v5.5z"></path>
+										</g>
+									</svg>
+								</div>
+								<div class="m-option g-drive-upload" tab=".upload-drive" data-container="body" data-toggle="popover" data-placement="top" data-content="Google Drive">
+									<svg width="26" height="22" viewBox="0 0 26 22" class="symbol symbol-media-manager-panel-googledrive-icon">
+										<g fill="none">
+											<path fill="#537ABD" d="M25.564 14.929H8.453L4.564 22h16.868"></path>
+											<path fill="#2EB672" d="M9.304 0L.748 14.143 4.638 22l8.338-15.443"></path>
+											<path fill="#FED14B" d="M17.082 0H9.304l8.36 14.929h7.973L17.082 0"></path>
+										</g>
+									</svg>
+								</div>
+								<div class="m-option" tab=".upload-link" data-container="body" data-toggle="popover" data-placement="top" data-content="Link"> <i class="fa fa-link"></i>
+								</div>
+							</div>
+						</div>
+						<div class="content mb-3">
+							<div class="content-title">Gallery</div>
+							<div class="images-options video_gallery"></div>
+							<div class="bar-body text-center"> <span class="badge badge-pill badge-light btn-showmore " show_srch=".searchVid" show_modal=".gallery_media">show more</span>
+							</div>
+						</div>
+						<div class="content mb-3">
+							<div class="content-title">Youtube</div>
+							<div class="images-options vid_youtube"></div>
+							<div class="bar-body text-center"> <span class="badge badge-pill badge-light btn-showmore" show-panel=".youtube_media">show more</span>
+							</div>
+						</div>
+						<div class="panel-footer text-center">
+							<button class="btn btn-primary btn-upload-media btn-round-blue me-upload-vid">Upload Media</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="left-bar-panel audio-panel">
+			<div class="panel-indicators">
+				<div class="indicator selected">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext"><b>Upload Your Media</b><br><br>Add any media you want from your computer or social accounts. </span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltipj"> <span class="tooltiptext">Wix Free Images</span>
+          </div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Wix Free Videos</span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Shutterstock Images </span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Shutterstock Videos</span>
+					</div>
+				</div>
+			</div>
+			<div class="bar-cover">
+				<div class="left-bar-header">
+					<div class="title border-b  padding-l-24">Audio
+						<div class="btn-close btn-close-panel">&times;</div>
+					</div>
+				</div>
+				<div class="search-block border-b">
+					<div class="padding-panel">
+						<p>What are you looking for?</p>
+						<div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+							<input type="text" class="form-control" placeholder="eg. business, fashion, fitness">
+						</div>
+					</div>
+				</div>
+				<div class="panel-content padding-panel style-scroll">
+					<div class="content-container">
+						<div class="content mb-3">
+							<div class="content-title">Upload Your media</div>
+							<div class="media-options">
+								<form id="form4" enctype="multipart/form-data" method="post" style="display: none">
+									<input id='auth4' name="authtoken" type="hidden" value="">
+									<!-- <label>Name :</label> -->
+									<!-- <input id="audioname" name="audio" type="text"> -->
+									<!-- <br> -->
+									<!-- <label>Audio :</label> -->
+									<input id="audio" name="audio" type="file">
+									<!-- <label>Thumbnail :</label>
+									<input id="audiothumb" name="thumbnail" type="file"> -->
+									<input type="hidden" name="create" value="1">
+									<input type="hidden" name="type" value="audio">
+									<br>
+									<input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" />
+								</form>
+								<!-- <button type="button" onclick="uploadAud()" class="uploadbut">Upload Audio</button> -->
+								<div class="m-option me-opt-upload-aud bg-blue" tab=".upload-pc" data-container="body" data-toggle="popover" data-placement="top" data-content="Upload Media">
+									<svg width="19" height="19" viewBox="0 0 19 19" class="symbol symbol-upload-btn">
+										<g fill-rule="evenodd">
+											<path d="M9 4.5V14h1V4.5L12.5 7l.5-.625L9.5 3 6 6.375 6.5 7 9 4.5z"></path>
+											<path d="M16 14.5c0 .827-.673 1.5-1.5 1.5h-10c-.827 0-1.5-.673-1.5-1.5V9H2v5.5C2 15.878 3.122 17 4.5 17h10c1.378 0 2.5-1.122 2.5-2.5V9h-1v5.5z"></path>
+										</g>
+									</svg>
+								</div>
+								<div class="m-option g-drive-upload" tab=".upload-drive" data-container="body" data-toggle="popover" data-placement="top" data-content="Google Drive">
+									<svg width="26" height="22" viewBox="0 0 26 22" class="symbol symbol-media-manager-panel-googledrive-icon">
+										<g fill="none">
+											<path fill="#537ABD" d="M25.564 14.929H8.453L4.564 22h16.868"></path>
+											<path fill="#2EB672" d="M9.304 0L.748 14.143 4.638 22l8.338-15.443"></path>
+											<path fill="#FED14B" d="M17.082 0H9.304l8.36 14.929h7.973L17.082 0"></path>
+										</g>
+									</svg>
+								</div>
+								<div class="m-option" tab=".upload-link" data-container="body" data-toggle="popover" data-placement="top" data-content="Link"> <i class="fa fa-link"></i>
+								</div>
+							</div>
+						</div>
+						<div class="content mb-3">
+							<div class="content-title">Gallery</div>
+							<div class="images-options gallery_audio"></div>
+							<div class="bar-body text-center"> <span class="badge badge-pill badge-light btn-showmore" show_srch=".searchAud" show_modal=".gallery_media">show more</span>
+							</div>
+						</div>
+						<div class="content mb-3">
+							<div class="content-title">Free Sound</div>
+							<div class="images-options FS_audio"></div>
+							<div class="bar-body text-center"> <span class="badge badge-pill badge-light btn-showmore" show-panel=".fs_media_m">show more</span>
+							</div>
+						</div>
+						<div class="panel-footer text-center">
+							<button class="btn btn-primary btn-upload-media btn-round-blue me-opt-upload-aud">Upload Media</button>
+						</div>
+					</div>
+				</div>
+			</div>
+    </div>
+		<div class="left-bar-panel image-panel">
+			<div class="panel-indicators">
+				<div class="indicator selected">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext"><b>Upload Your Media</b><br><br>Add any media you want from your computer or social accounts. </span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Wix Free Images</span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Wix Free Videos</span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Shutterstock Images </span>
+					</div>
+				</div>
+				<div class="indicator">
+					<div class="indicator-dot custom-tooltip"> <span class="tooltiptext">Shutterstock Videos</span>
+					</div>
+				</div>
+			</div>
+			<div class="bar-cover">
+				<div class="left-bar-header">
+					<div class="title border-b  padding-l-24">Image
+						<div class="btn-close btn-close-panel">&times;</div>
+					</div>
+				</div>
+				<div class="search-block border-b">
+					<div class="padding-panel">
+						<p>What are you looking for?</p>
+						<div class="form-group has-search m-0"> <span class="fa fa-search form-control-feedback"></span>
+							<input type="text" class="form-control" placeholder="eg. business, fashion, fitness">
+						</div>
+					</div>
+				</div>
+				<div class="panel-content padding-panel style-scroll">
+					<div class="content-container">
+						<div class="content mb-3">
+							<div class="content-title">Upload Your media</div>
+							<div class="media-options ">
+							<!-- <button id="use" type="button" type="submit" style="display: none;">Upload images</button> -->
+							<form id="form" enctype="multipart/form-data" method="post" style="position: absolute;">
+								<input id='auth2' name="authtoken" type="hidden" value="">
+								<!-- <input id="image" type="file" accept='image/*'> -->
+								<input type="hidden" name="create" value="1">
+								<input type="hidden" name="type" value="image">
+								<img style="display: none" id="my-image" src="#" />
+								<!-- <input type="textarea" name="tags" rows=4 col=4 value="" placeholder="tags" data-role="tagsinput" /> -->
+								<input style="display: none;"  type="file" name="image" id="image" required="required" multiple="multiple" accept='image/*' />
+							</form>
+                  			<!-- <button style="display:none" id="use" type="button" class="btn btn-primary btn-upload-media btn-round-blue mb-4" type="submit">Upload images</button> -->
+								<div class="m-option me-opt-upld bg-blue"  data-container="body" data-toggle="popover" data-placement="top" data-content="Upload Media">
+									<svg width="19" height="19" viewBox="0 0 19 19" class="symbol symbol-upload-btn">
+										<g fill-rule="evenodd">
+											<path d="M9 4.5V14h1V4.5L12.5 7l.5-.625L9.5 3 6 6.375 6.5 7 9 4.5z"></path>
+											<path d="M16 14.5c0 .827-.673 1.5-1.5 1.5h-10c-.827 0-1.5-.673-1.5-1.5V9H2v5.5C2 15.878 3.122 17 4.5 17h10c1.378 0 2.5-1.122 2.5-2.5V9h-1v5.5z"></path>
+										</g>
+									</svg>
+								</div>
+								<div class="m-option g-drive-upload" tab=".upload-drive" data-container="body" data-toggle="popover" data-placement="top" data-content="Google Drive">
+									<svg width="26" height="22" viewBox="0 0 26 22" class="symbol symbol-media-manager-panel-googledrive-icon">
+										<g fill="none">
+											<path fill="#537ABD" d="M25.564 14.929H8.453L4.564 22h16.868"></path>
+											<path fill="#2EB672" d="M9.304 0L.748 14.143 4.638 22l8.338-15.443"></path>
+											<path fill="#FED14B" d="M17.082 0H9.304l8.36 14.929h7.973L17.082 0"></path>
+										</g>
+									</svg>
+								</div>
+								<div class="m-option" tab=".upload-link" data-container="body" data-toggle="popover" data-placement="top" data-content="Link"> <i class="fa fa-link"></i>
+								</div>
+							</div>
+						</div>
+						<div class="content mb-3">
+							<div class="content-title">Gallery</div>
+							<div class="images-options galleryimgs"></div>
+							<div class="bar-body text-center"> <span class="badge badge-pill badge-light btn-showmore imagebut showImagesUploaded" show_srch=".searchImg" show-panel="gallery_media">show more</span>
+							</div>
+						</div>
+						<div class="content mb-3">
+							<div class="content-title">UnSplash</div>
+							<div class="images-options" id="unsplash_thumb"></div>
+							<div class="bar-body text-center"> <span class="badge badge-pill badge-light btn-showmore imagebut" show-panel=".unsplash_media">show more</span>
+							</div>
+						</div>
+						<div class="panel-footer text-center">
+							<button class="btn btn-primary btn-upload-media btn-round-blue me-opt-upld">Upload Media</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="left-bar-panel text-panel">
+			<div class="bar-cover">
+				<div class="left-bar-header">
+					<div class="title border-b  padding-l-24">Text
+						<div class="btn-close btn-close-panel">&times;</div>
+					</div>
+				</div>
+				<form class="form-blue float-left w-100 p-3" action="">
+					<div class="form-group">
+						<textarea onkeyup="phrasechanged(this)" type="text" class="form-control" id="text" placeholder="Enter text" name="text" rows="4"></textarea>
+					</div>
+					<div class="form-group">
+						<div class="float-left selectColor">
+							<div class="float-left icon-clr-pickr" onclick="document.getElementById('change-text-color').click()" data-toggle="tooltip" data-placement="top" title="text color"></div>
+							<input id="change-text-color" type="color" class="form-control d-none textColor" oninput="colorpicker(this)"> <small class="float-left mt-2 ml-2 hashcode" style="color:#ccc">#cccccc</small>
+						</div>
+						<div class="float-right text-alignment">
+              <i agln-val="left" class="fa fa-align-left rounded border border-dark p-1" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="align left"></i>
+							<i agln-val="center" class="fa fa-align-center rounded border border-dark p-1" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="align center"></i>
+							<i agln-val="right" class="fa fa-align-right rounded border border-dark p-1" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="align right"></i>
+						</div>
+					</div>
+					<div class="panel-content padding-panel p-0 w-100 float-left pb-5  mt-3 style-scroll">
+              <div class="font-options w-100 float-left pb-4 mb-5 style-scroll">
+                  <div class="font-option col-sm-6 float-left mt-1" onclick='pushTxt(this)' style="font-family: orbitron;">
+                    <div class="w-100 float-left f-text">Text</div>
+                  </div>
+                  <div class="font-option col-sm-6 float-left mt-1 " onclick='pushTxt(this)' style="font-family: 'roboto';">
+                    <div class="w-100 float-left f-text">Text</div>
+                  </div>
+                  <div class="font-option col-sm-6 float-left mt-1 " onclick='pushTxt(this)' style="font-family: 'fantasy';">
+                    <div class="w-100 float-left f-text">Text</div>
+                  </div>
+                  <div class="font-option col-sm-6 float-left mt-1 " onclick='pushTxt(this)' style="font-family: 'leaguemono'">
+                    <div class="w-100 float-left f-text">Text</div>
+                  </div>
+                  <div class="font-option col-sm-6 float-left mt-1 " onclick='pushTxt(this)' style="font-family: 'knewave'">
+                    <div class="w-100 float-left f-text">Text</div>
+                  </div>
+                  <div class="font-option col-sm-6 float-left mt-1 " onclick='pushTxt(this)' style="font-family: 'yatraone'">
+                    <div class="w-100 float-left f-text">Text</div>
+                  </div>
+                  <div class="font-option col-sm-6 float-left mt-1 " onclick='pushTxt(this)' style="font-family: 'amita';">
+                    <div class="w-100 float-left f-text">Text</div>
+                  </div>
+                </div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="left-bar-panel cta-panel">
+			<div class="bar-cover">
+				<div class="left-bar-header">
+					<div class="title border-b  padding-l-24">CTA
+						<div class="btn-close btn-close-panel">&times;</div>
+					</div>
+				</div>
+				<div class="panel-content panel-create-btn padding-panel style-scroll">
+					<div class="content-container">
+						<div class="content mb-3">
+							<div class="content-title">Create Button</div>
+							<div class="search-block mb-2">
+								<div class="p-1 position-relative">
+									<div class="form-group has-search m-0 pr-5"> <span class="fa fa-pencil form-control-feedback"></span>
+										<input id="buttext" type="text" onchange="chgtxt(this)" onfocus="msg()" onkeyup="chgtxt(this)" class="form-control" placeholder="Type Text">
+									</div>
+									<div class="select-color selectColor">
+										<div class="icon-clr-pickr" onclick="document.getElementById('change-btn-text-color').click()" data-toggle="tooltip" data-placement="top" title="CTA text color"></div> <small class="ml-2 text-muted color1">#cccccc</small>
+										<input  type="color" id="change-btn-text-color" oninput="colorpicker(this)" class="form-control d-none textCol">
+									</div>
+									<script>
+									var val1=document.getElementById('change-btn-text-color').value;
+									document.getElementById('color1').innerHTML=val1;
+									</script>
+								</div>
+							</div>
+							<div class="search-block pb-3">
+								<div class="p-1 position-relative">
+									<div class="form-group has-search m-0 pr-5"> <span class="fa fa-external-link form-control-feedback"></span>
+                    <!-- <input type="text" class="form-control" placeholder="Input URL"> -->
+                    <input id="butlink" class="form-control" type="text" placeholder="Input URL" onchange="chglnk(this)">
+									</div>
+									<div class="select-color selectColor">
+										<div class="icon-clr-pickr" onclick="document.getElementById('change-btn-bg').click()" data-toggle="tooltip" data-placement="top" title="CTA background color"></div> <small class="ml-2 text-muted color2">#cccccc</small>
+										<input type="color" id="change-btn-bg" oninput="colorpicker(this)" class="form-control d-none">
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 p-0 mt-2 float-left">
+                <div class="content-title">Choose Icon</div>
+              <select style="display: none" id='buticn' onchange="chgtxt(this)" style="font-family:FontAwesome, Arial; padding: 8px;">
+						<option></option>
+						<option>&#xf060</option>
+						<option>&#xf061</option>
+						<option>&#xf062</option>
+						<option>&#xf063</option>
+						<option>&#xf000</option>
+						<option>&#xf001</option>
+						<option>&#xf002</option>
+						<option>&#xf003</option>
+						<option>&#xf004</option>
+						<option>&#xf005</option>
+						<option>&#xf006</option>
+						<option>&#xf007</option>
+						<option>&#xf008</option>
+						<option>&#xf009</option>
+						<option>&#xf00a</option>
+						<option>&#xf00b</option>
+						<option>&#xf00c</option>
+						<option>&#xf00d</option>
+						<option>&#xf00e</option>
+						<option>&#xf00f</option>
+					</select>
+                <div class="icons-holder style-scroll">
+                    <i class="col-sm-2 float-left" style="font-family: FontAwesome, Arial;">&#xf060</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf061</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf062</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf063</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf000</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf001</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf002</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf003</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf004</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf005</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf006</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf007</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf008</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf009</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf00a</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf00b</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf00c</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf00d</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf00e</i>
+                    <i class="col-sm-2 float-left bn-icon" style="font-family: FontAwesome, Arial;">&#xf00f</i>
+								</div>
+							</div>
+							<div class="col-sm-12 p-0 mt-3 float-left text-center">
+								<div class="content-title">Button Preview</div>
+								<a style="font-family: FontAwesome, Arial;background: #b3b3b3; border-radius: 20px; color: #000; border-radius: 18px;" href="#" class="btn-prev text-center p-2" id="ctabutton">Click Now For Offers</a>
+								<div class="slidecontainer mt-4">
+									<p class="mb-1 text-blue" style="line-height: 61px;"><small>Roundness</small>
+									</p>
+                  <!-- <input type="range" min="1" max="100" value="50" class="slider" id="butround"> -->
+                  <input title="Roundness of Button" type="range" min="1" max="50" value="0" class="slider" id="butround" oninput="chground(this)">
+									<p style="display:none">Value: <span id="demo"></span>
+									</p>
+                </div>
+                <button onclick="addbut(this);" data-dismiss="modal" style="top: 15px; position: relative;" class="btn-round-blue mt-4 text-center p-2 w-100">Add CTA To Scene</button>
+                <!-- <a style="top: 15px; position: relative;" href="#" class="btn-prev btn-round-blue mt-4 text-center p-2 w-100">Add CTA To Scene</a> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="sidebar right-fixed-bar">
+			<div class="effect-options">
+				<div class="mb-3 "> <b><span class="show-effects">&larr;&nbsp;</span> Effects</b>
+				</div>
+				<div class="effect-option" id="anim1"><span class="btn-select-effect fill"></span><span>Rotate</span>
+				</div>
+				<div class="effect-option" id='anim2'><span class="btn-select-effect"></span><span>Scale Up</span>
+				</div>
+				<div class="effect-option" id='anim3'><span class="btn-select-effect fill"></span><span>Scale Down</span>
+				</div>
+				<div class="effect-option" id='anim4'><span class="btn-select-effect"></span><span>Change Color</span>
+				</div>
+				<div class="effect-option" id='anim5'><span class="btn-select-effect fill"></span><span>Move Up</span>
+				</div>
+				<div class="effect-option" id='fx1'><span class="btn-select-effect"></span><span>Fade Out</span>
+				</div>
+				<div class="effect-option" id='fx2'><span class="btn-select-effect"></span><span>Fade In</span>
+				</div>
+				<div class="effect-option" id='fx3'><span class="btn-select-effect"></span><span>Blink</span>
+				</div>
+				<div class="effect-option" id='fx4'><span class="btn-select-effect"></span><span>Scale Y</span>
+				</div>
+				<div class="effect-option" id='fx5'><span class="btn-select-effect"></span><span>Particals</span>
+				</div>
+				<div class="effect-option" id='fx6'><span class="btn-select-effect"></span><span>Snow Particals</span>
+				</div>
+				<div class="effect-option" id='fx7'><span class="btn-select-effect"></span><span>Dirt Particals</span>
+				</div>
+				<div class="effect-option" id='fx8'><span class="btn-select-effect"></span><span>Remove Effects</span>
+				</div>
+				<!-- <div class="effect-option"><i class="fa fa-trash"></i> Remove</span></div> -->
+				<div class="bar-body text-center"> <span class="badge badge-pill badge-light show-effects">Toolbar</span>
+				</div>
+			</div>
+			<div class="bar-head border-b mt-0 pt-3 pb-3"> <small class="mb-0">Toolbar</small>
+				<span>
+            &times;
+        </span>
+			</div>
+			<div class="bar-body ">
+				<div class="bar-item"> <span><small><i class="fa fa-clone" aria-hidden="true"></i> Copy</small></span>
+				</div>
+				<div class="bar-item" id='remove'> <span><small><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</small></span>
+				</div>
+			</div>
+			<div class="bar-head text-center"> <small>Size</small>
+			</div>
+			<div class="bar-body border-b pt-0">
+				<div class="bar-item">W:</div>
+				<div class="bar-item">
+					<input type="text" value="980">
+				</div>
+				<div class="bar-item">H:</div>
+				<div class="bar-item">
+					<input type="text" value="980">
+				</div>
+			</div>
+			<div class="bar-head text-center"> <small>Position</small>
+			</div>
+			<div class="bar-body border-b pt-0">
+				<div class="bar-item">X:</div>
+				<div class="bar-item">
+					<input type="text" value="980">
+				</div>
+				<div class="bar-item">Y:</div>
+				<div class="bar-item">
+					<input type="text" value="980">
+				</div>
+			</div>
+			<div class="bar-body text-center pb-3 pt-3"> <span class="badge badge-pill badge-light show-effects">Effects</span>
+			</div>
+		</div>
+	</section>
+	<script src="Crop/croppie.js"></script>
+	<script src="UI.js"></script>
+	<script src="Experience.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.1/cropper.js" integrity="sha256-bEvzqfDdDJeGI3K2IyVfr13BqY1yTVYu0AkmDKhfiLc=" crossorigin="anonymous"></script>
+	<script>
+		var developerKey = 'AIzaSyDQAHzETBqVoteIYO0O6eZq2yxTpkZJzqI';
+
+		    // The Client ID obtained from the Google API Console. Replace with your own Client ID.
+		    var clientId = '942791088244-a7mic0de50ft9iutuun1i2in7jtc09on.apps.googleusercontent.com';
+
+		    // Scope to use to access user's photos.
+		    var scope = 'https://www.googleapis.com/auth/photos';
+
+		    var pickerApiLoaded = false;
+		    var oauthToken;
+
+		    // Use the API Loader script to load google.picker and gapi.auth.
+		    function onApiLoad() {
+		      gapi.load('auth2', onAuthApiLoad);
+		      gapi.load('picker', onPickerApiLoad);
+		    }
+
+		    function onAuthApiLoad() {
+		      var authBtn = document.getElementById('authg');
+		      authBtn.disabled = false;
+		      authBtn.addEventListener('click', function () {
+		        gapi.auth2.authorize({
+		          client_id: clientId,
+		          scope: scope
+		        }, handleAuthResult);
+		      });
+		    }
+
+		    function onPickerApiLoad() {
+		      pickerApiLoaded = true;
+		      createPicker();
+		    }
+
+		    function handleAuthResult(authResult) {
+		      if (authResult && !authResult.error) {
+		        oauthToken = authResult.access_token;
+		        createPicker();
+		      }
+		    }
+
+		    // Create and render a Picker object for picking user Photos.
+		    function createPicker() {
+		      if (pickerApiLoaded && oauthToken) {
+		        var picker = new google.picker.PickerBuilder().
+		          addView(google.picker.ViewId.PHOTOS).
+		          setOAuthToken(oauthToken).
+		          setDeveloperKey(developerKey).
+		          setCallback(pickerCallback).
+		          build();
+				picker.setVisible(true);
+				console.log(picker, 'pickerrrrrrrrrrr')
+		      }
+		    }
+
+		    // A simple callback implementation.
+		    function pickerCallback(data) {
+		      var url = 'nothing';
+		      if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
+		        var doc = data[google.picker.Response.DOCUMENTS][0];
+		        url = doc[google.picker.Document.URL];
+		      }
+			  var message = 'You picked: ' + url;
+			  let form = document.querySelector('#form');
+			  let formData = new FormData(form);
+			  formData.append('image', url);
+			  $.ajax({
+		method: 'POST',
+		url: 'https://pitchar.io/api/_create-assets.php',
+		data: formData,
+		processData: false,
+		contentType: false,
+		xhr: function () {
+			var xhr = new window.XMLHttpRequest();
+
+			// Upload progress
+			xhr.upload.addEventListener(
+				'progress',
+				function (evt) {
+					if (evt.lengthComputable) {
+						var percentComplete = evt.loaded / evt.total;
+						//Do something with upload progress
+						uploadbar.style.width = percentComplete * 100 + '%';
+						if (percentComplete == 1) uploadbar.style.width = 0;
+					}
+				},
+				false
+			);
+
+			// Download progress
+			xhr.addEventListener(
+				'progress',
+				function (evt) {
+					if (evt.lengthComputable) {
+						var percentComplete = evt.loaded / evt.total;
+						// Do something with download progress
+						uploadbar.style.width = percentComplete * 100 + '%';
+						if (percentComplete == 1) uploadbar.style.width = 0;
+					}
+				},
+				false
+			);
+
+			return xhr;
+		},
+		success(data) {
+			console.log(data);
+			$(".showImagesUploaded").click();
+		}
+	});
+			  console.log(message)
+			  document.getElementById('result').innerHTML = message;
+		    }
+
+
+		    function init() {
+		      gapi.client.setApiKey("AIzaSyACc5T8EmsRDs1nK_i8zqmcK8T9hVy-ljs");
+		      gapi.client.load("youtube", "v3", function () {
+		      });
+
+		    }
+
+		    var innerImageURL = null
+		    var fullMarkerURL = null
+
+		    innerImageURL = 'trainer/inner-images/inner-hiro.png'
+		    updateFullMarkerImage()
+
+		    document.querySelector('#buttonDownloadEncoded').addEventListener('click', function () {
+				debugger;
+		      if (innerImageURL === null) {
+		        alert('upload a file first')
+		        return false;
+		      }
+		      console.assert(innerImageURL)
+
+		      THREEx.ArPatternFile.encodeImageURL(innerImageURL, function onComplete(patternFileString) {
+		        THREEx.ArPatternFile.triggerDownload(patternFileString);
+		      })
+		    })
+
+
+		    document.querySelector('#buttonDownloadFullImage').addEventListener('click', function () {
+		      // debugger
+		      if (innerImageURL === null) {
+		        alert('upload a file first')
+		        return
+		      }
+
+		      // tech from https://stackoverflow.com/questions/3665115/create-a-file-in-memory-for-user-to-download-not-through-server
+		      var domElement = window.document.createElement('a');
+		      domElement.href = fullMarkerURL;
+		      domElement.download = 'marker.png';
+		      document.body.appendChild(domElement)
+		      domElement.click();
+		      document.body.removeChild(domElement)
+		    })
+
+
+
+		    document.querySelector('#patternRatioSlider').addEventListener('input', function () {
+		      // update the patternRatio number
+		      var patternRatio = document.querySelector('#patternRatioSlider').value / 100
+		      var domElement = document.querySelector('[for=patternRatioSlider] span')
+		      domElement.innerHTML = `Pattern Ratio ${patternRatio.toFixed(2)}`
+
+		      // update fullMarkerImage
+		      updateFullMarkerImage()
+		    })
+
+
+		    document.querySelector('#fileinput').addEventListener('change', function () {
+				//debugger;
+		      var file = this.files[0];
+		      // debugger
+
+		      var reader = new FileReader();
+		      reader.onload = function (event) {
+		        innerImageURL = event.target.result
+		        updateFullMarkerImage()
+		      };
+		      reader.readAsDataURL(file);
+		    })
+
+		    function updateFullMarkerImage() {
+		      // get patternRatio
+		      var patternRatio = document.querySelector('#patternRatioSlider').value / 100
+
+		      THREEx.ArPatternFile.buildFullMarker(innerImageURL, patternRatio, function onComplete(markerUrl) {
+		        fullMarkerURL = markerUrl
+
+
+		        // put fullMarkerImage into #imageContainer
+
+
+		      })
+		    }
+	</script>
+	<script>
+		$(document).ready(function(){
+		        // main menu, fixed left baar
+		       $('.left-fixed-bar').on('click','.menu-left', function() {
+		         var panel = $(this).attr('panel-name');
+		         selectItem('vertical-bars', 'active', panel);
+		         selectItem('left-fixed-bar', 'selected', this);
+		       });
+		       // fixed left bar indicators
+		       $('.panel-indicators').on('click','.indicator', function() {
+		         var index = $(this).index();
+		         selectItem('panel-indicators', 'selected', this)
+		         $(".active .panel-content").animate({scrollTop: $(".active .panel-content .content").eq(index).position().top}, 600, 'swing');
+			  });
+			  $('#tab-3d-files a.nav-link').on('shown.bs.tab', function (e) {
+					$('#3d-type').val($(e.target).attr("value"));
+				});
+		        // open upload media modal
+		        $('.me-opt').click(function(){
+		          var tab = $(this).attr('tab')
+		          $('#modal-upload-media').modal('show');
+		          $(tab).click();
+				});
+				$('.upload-3d-media').click(function(){
+				  $('#modal-upload-media').modal('show');
+				  var tab = $(this).attr('tab');
+				  console.log(tab, 'tab')
+				  $(tab).click();
+            	});
+				// upload img
+				$('.me-opt-upld').click(function(){
+		          $('#image').click();
+				});
+				$('.me-opt-upload-aud').click(function(){
+
+		          $('#audio').click();
+				});
+				$('.me-upload-vid').click(function(){
+					  $('#video').click();
+				});
+
+		        // show effects panel
+		        $('.show-effects').click(function(){
+		          $(".effect-options").toggleClass('slide');
+		          $('.effect-option').click(function(){
+		            $('.effect-option').removeClass('fill');
+		            $(this).addClass('fill');
+		          });
+		        });
+		        // image file info panel
+		        $('body').on('click','.img-panel', function(){
+		          $('.img-panel').removeClass('active');
+		          $(this).addClass('active');
+		        });
+		        $('.close-media-info').click(function(){
+		          $('.media-info').removeClass('show');
+		        });
+		        $('.btn-continue').click( function(e){
+		           e.preventDefault();
+				   $('.congo-screen').addClass('slide-on');
+				   sharelnk(this)
+		        });
+				$('.btn-change-detail').click( function(e){
+		           e.preventDefault();
+		           $('.congo-screen').removeClass('slide-on')
+		        });
+		        // upload media modal tabs
+		        $(".tabs").on('click', 'a', function(e){
+		           e.preventDefault();
+		           $('#tabs-container .entry-content').hide();
+		           $($(this).attr("href")).show();
+		           selectItem('tabs', 'active', this);
+		        });
+
+		        // upload media
+		        $('.btn-upload-media .btn-round-blue').click(function(){
+		          $('#fileid').click()
+            });
+
+
+		        // fixed media nav panel left side inside modal
+		        $('.left-panel-option').click(function(){
+		            var panel = $(this).attr('show_class');
+		            selectItem('upload-media-panel', 'active', panel);
+		            selectItem('left-panel', 'selected', this);
+		        });
+
+		        // close main leftbar
+		        $('.btn-close-panel').click(function(){
+		          $(this).closest('.left-bar-panel').removeClass('active');
+		          $('.left-bar-item.selected').removeClass('selected');
+		        });
+
+		        // tooltip
+		        $(document).on("mouseover", ".custom-tooltip", function() {
+		          $('.custom-tooltip .tooltiptext').css({'opacity':0,'visibility': 'hidden'});
+		          $(this).find('.tooltiptext').css({'opacity':1,'visibility': 'visible'});
+            });
+
+            $('.icons-holder i').click(function(){
+              $('#buticn').val($(this).text());
+              $('#buticn').change();
+            });
+			$('.btn-addMedToPage').click(function(){
+			  $('.img-panel.active img').click();
+			  $("#modal-show-more").modal("hide")
+			});
+			$('.g-drive-upload').click(function(){
+			  $("#authg").click();
+			});
+            $('.btn-edit-tags').click(function(){
+
+                $('.edit-tags, .saved-tags').toggleClass('d-none');
+
+                var id = $('#elementid').val();
+                if($('.edit-tags').hasClass('d-none')){
+                  console.log($("#newtags").val(), "new tags  ssss")
+                  $('#media_'+id+' .edit_info').attr('data-tags', $("#newtags").val());
+                  $('#media_'+id+' .edit_info').click();
+                  $(this).html('');
+                  $(this).append('<small>Edit Tags</small>');
+                }else{
+                  var saved_tags = $('#media_'+id+' .edit_info').attr('data-tags').split(',');
+                  $('.media-info .bootstrap-tagsinput input').val(saved_tags);
+                  $('.media-info .bootstrap-tagsinput input').keypress();
+                  if(saved_tags || $('#newtags').val()){
+                    $(this).html('');
+                    $(this).append('<small>View Tags</small>')
+                  }else{
+                    $(this).html('');
+                  }
+                }
+
+            });
+		        // image popup on hover
+		        $(".images-options img").mouseenter(function() {
+		          var div = $(this);
+		          $('.fix img').attr('src', div.attr('src'));
+		          $('.fix').show().css({ 'left':div.offset().left+div.width()+10,'top':div.offset().top-20 })
+		        }).mouseout(function() {
+		          $('.fix').hide();
+		        })
+            // text alignment
+            $('.text-alignment i').click(function(){
+              $('.text-alignment i').removeClass('a-select')
+              $(this).addClass('a-select')
+              var align = $(this).attr('agln-val');
+              console.log(align)
+            });
+		        // popover
+		        $('[data-toggle="popover"]').popover({
+		            placement : 'top',
+		            trigger : 'hover'
+		        });
+
+		        var slider = document.getElementById("myRange");
+		        var output = document.getElementById("demo");
+		        output.innerHTML = slider.value;
+
+		        slider.oninput = function() {
+		          output.innerHTML = this.value;
+		        }
+         });
+         $('#myModal').on('hidden.bs.modal', function () {
+              $('.media-info').removeClass('show')
+          });
+		     // close menubar when clicked shomewhere else on window
+		     $(document).mouseup(function(e)
+		      {
+		          var container = $(".left-bar-panel, .modal");
+		          // if the target of the click isn't the container nor a descendant of the container
+		          if (!container.is(e.target) && container.has(e.target).length === 0)
+		          {
+		            $('.left-bar-panel.active').removeClass('active');
+		            $('.left-bar-item.selected').removeClass('selected');
+		          }
+		     });
+
+		     function selectItem(parent,addclass,ele){
+		       $(ele).parents('.'+parent).find('.'+addclass).removeClass(addclass).end().end().addClass(addclass);
+         }
+
+		     function colorpicker(elem){
+           var textColor = $(elem).hasClass('textColor')
+		       var color = $(elem).val();
+		       $(elem).closest('.selectColor').find('.icon-clr-pickr').css('background',color);
+		       if(!textColor){
+              $('.btn-prev').css({
+              'background': $('#change-btn-bg').val(),
+              'color': $('#change-btn-text-color').val()
+            });
+						var textCol = $(elem).hasClass('textCol');
+						if(textCol){
+							$('.color1').text(color);
+						}
+						else{
+							$('.color2').text(color);
+						}
+           }else{
+             $('.font-option>div').css('color', $(elem).val());
+             $('.hashcode').text(color);
+           }
+			 }
+			 function copyLinkUrl() {
+				var copyText = document.getElementById("shrlnk");
+				copyText.select();
+				copyText.setSelectionRange(0, 99999)
+				document.execCommand("copy");
+
+				alert("Copied the text: " + copyText.value);
+		   	}
+	</script>
+	<script src="https://apis.google.com/js/client.js?onload=init"></script>
+	<script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
+</body>
+
+</html>
